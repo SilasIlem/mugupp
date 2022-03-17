@@ -1,0 +1,2 @@
+Dear educators and STAS aplicants, you are hereby required to be on the look out for syllabus that will be available here in 2022.
+STAS applicants are also expected to read their copy of literature downloaded upon registering for STAS test. It will be used for your Use of English.

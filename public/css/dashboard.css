@@ -1,0 +1,374 @@
+body {
+    line-height: 1.5rem;
+    overflow-x: scroll;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 999999;
+}
+
+#container {
+    min-width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#m-all {
+    min-width: 800px;
+    max-width: 800px;
+    justify-content: center;
+    display: flex;
+}
+
+#m-me {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 400px;
+    max-height: 400px;
+    left: 20vw;
+    top: 120px;
+    margin: 0px 12px;
+}
+
+#m-we {
+    min-width: 620px;
+    max-width: 620px;
+    min-height: 90vh;
+}
+
+#m-them {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 400px;
+    max-height: 400px;
+    margin: 10px 16px 10px 4px;
+    padding: 16px;
+    position: sticky;
+    background: white;
+}
+
+.m-box {
+    margin: 0px 0px 16px 0px;
+    background: white;
+    min-height: 620px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.m-box-top {
+    margin: 0px 0px 16px 0px;
+    background: white;
+    min-height: 100px;
+    max-height: 100px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.m-box-top button {
+    font-size: 18px;
+    color: grey;
+    font-weight: 800;
+    padding: 16px 12px;
+}
+
+#poster {
+    height: 90vh;
+    width: 80vw;
+    position: fixed;
+    margin: 8px 10vw;
+    z-index: 99999;
+    padding: 16px;
+    background: white;
+    box-shadow: 0px 0px 20px #07649f;
+    display: none;
+}
+
+#poster button {
+    float: right;
+    height: 50px;
+    width: 60px;
+    margin: 12px;
+    color: white;
+    background: #07649f;
+    border-radius: 4px;
+}
+
+#poster form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 80%;
+    margin: 80px auto;
+    box-shadow: inset 0px 0px 8px #07649f;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#poster form > * {
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px #07649f;
+}
+
+#poster form textarea {
+    height: 250px;
+}
+
+#poster form button {
+    height: 30px;
+    color: white;
+    width: 70%;
+    background: rgb(50, 202, 45);
+    box-shadow: 0px 0px 8px ghostwhite;
+}
+
+#poster.show {
+    display: block;
+}
+
+#m-menu-tray {
+    margin: 0px 0px 16px 0px;
+    background: #07649f;
+    color: white;
+    min-height: 60px;
+    max-height: 60px;
+    display: flex;
+    align-content: center;
+}
+
+#m-menu-tray ul {
+    display: flex;
+    min-width: 100%;
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+#m-menu-tray li {
+    text-align: center;
+    cursor: pointer;
+}
+
+#m-menu-tray li:hover {
+    color: rgb(50, 202, 45);
+}
+
+.m-box-top img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.m-box-top div {
+    display: flex;
+}
+
+.m-box-top div > * {
+    margin: 8px 12px;
+}
+
+.m-box-head {
+    display: flex;
+    padding: 16px 12px;
+    min-height: 60px;
+}
+
+.m-box-head > * {
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.head-1 {
+    min-width: 80%;
+    max-width: 80%;
+}
+
+.head-0,
+.head-2 {
+    min-width: 10%;
+    max-width: 10%;
+    font-size: 18px;
+}
+
+.head-0 img {
+    border-radius: 50%;
+    margin-right: 8px;
+    height: 40px;
+    width: 40px;
+}
+
+.head-1 p {
+    font-size: 12px;
+}
+
+.head-2 i {
+    text-align: center;
+    font-size: 28px;
+    padding-left: 12px;
+}
+
+.m-media {
+    min-height: 360px;
+    max-height: 360px;
+}
+
+.m-box-content h2 {
+    font-size: 20px;
+    padding: 0px 12px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.m-box-content p {
+    margin: 8px;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 20px;
+    max-height: 60px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.m-media video,
+.m-media img {
+    min-height: 360px;
+    max-height: 360px;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.interests {
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.interests div {
+    margin: 12px auto;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+}
+
+.m-box-foot {
+    min-height: 60px;
+    max-height: 60px;
+    padding: 8px 12px;
+    border-top: 1px solid #07659f2d;
+    margin-top: 8px;
+    display: flex;
+    min-width: 100%;
+    align-items: center;
+}
+
+.m-clickables {
+    display: flex;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    justify-content: space-between;
+    padding: 16px 12px;
+}
+
+.m-clickables #start {
+    display: flex;
+    min-width: 46%;
+    max-width: 46%;
+    min-height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.m-clickables #end {
+    display: flex;
+    min-width: 20%;
+    max-width: 20%;
+    min-height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.m-box-foot i {
+    text-align: center;
+    font-weight: 800;
+    color: grey;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1264px) {
+    #container {
+        min-width: 100vw;
+        max-width: 100vw;
+        margin-left: 0px;
+    }
+
+    #m-me {
+        left: 0px;
+    }
+}
+
+.m-tray {
+    height: 60px;
+    margin: 16px;
+    width: 90%;
+}
+
+.m-tray h1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.m-tray ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.m-tray li {
+    display: flex;
+    margin: 4px 0px;
+    padding: 4px;
+    justify-content: space-between;
+    box-shadow: inset 0px 0px 4px grey;
+    height: 60px;
+}
+
+.m-tray li div {
+    display: flex;
+    align-items: center;
+}
+
+.m-tray li > * {
+    margin: auto 12px;
+}
+
+.m-tray img {
+    height: 40px;
+    width: 40px;
+    margin: 8px;
+    border-radius: 50%;
+}
+
+.m-tray a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.m-tray > a button {
+    height: 40px;
+    background: rgb(50, 202, 45);
+    margin: 12px;
+    color: white;
+    width: 120px;
+}
