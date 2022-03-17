@@ -744,7 +744,7 @@
         
         @guest()
             <div id = preloader>
-                <img src = "{{asset('images/Mugupp.png')}}" />
+                <img src = "{{asset('images/mugupp.png')}}" />
                 <div>
                     <div style = "animation-delay : -0.16s" class = "loading"></div>
                     <div style = "animation-delay : -0.32s" class = "loading"></div>
