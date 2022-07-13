@@ -56,6 +56,7 @@ class RegisteredUserController extends Controller
 
 
         $user = User::create([
+            'uid' => '@muguser' . $request->name,
             'referrer' => $request->referrer,
             'subscription' => $request->understood == 'on' ? True : False,
             'comment' => $request->comment,
