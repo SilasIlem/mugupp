@@ -19,7 +19,7 @@ class CreateEventViewsTable extends Migration
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
-            $table->foreignId('evemt_id')
+            $table->foreignId('event_id')
                 ->references('id')
                 ->on('events')
                 ->onDelete('cascade');

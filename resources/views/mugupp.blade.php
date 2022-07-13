@@ -24,7 +24,6 @@
         <link rel="stylesheet" href = "{{asset('css/bootstrap-icons/bootstrap-icons.css')}}" />
         <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
         <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
         <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
         <link rel="stylesheet" href="css/nice-select.css" type="text/css">
@@ -42,7 +41,6 @@
         
         @guest()
             <div id = "preloader">
-                {{-- <img src = "{{asset('images/mugupp.png')}}" /> --}}
                 <h1>Mugupp</h1>
                 <div>
                     <div style = "animation-delay : -0.16s" class = "loading"></div>
@@ -66,7 +64,7 @@
                         <div class="mt-6 flex login-box flex-col sm:justify-center items-center sm:pt-0">
                         
                             <h1 id = "m-name">
-                                <img src="{{ asset('images/mugupp.png')}}" alt="">
+                                Mugupp
                             </h1>
 
                             
@@ -588,30 +586,21 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="stp-text">
-                                        <div class="s-text">For Sale</div>
-                                        <h2>Villa 9721 Glen Creek</h2>
+                                        <div class="s-text">Free</div>
+                                        <h2>{{ $course->title }}</h2>
                                         <div class="room-price">
-                                            <span>Start From:</span>
-                                            <h4>$3.000.000</h4>
+                                            <span>Free</span>
                                         </div>
-                                        <div class="courses-location"><i class="icon_pin"></i> 9721 Glen Creek Ave. Ballston Spa, NY</div>
+                                        <div class="courses-location"><i class="bi bi-pin"></i> Denzel Monak</div>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                         <ul class="room-features">
                                             <li>
-                                                <i class="fa fa-arrows"></i>
-                                                <p>5201 sqft</p>
+                                                <i class="bi bi-eye"></i>
+                                                <p>5 attendances</p>
                                             </li>
                                             <li>
-                                                <i class="fa fa-bed"></i>
-                                                <p>8 Bed Room</p>
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-bath"></i>
-                                                <p>7 Baths Bed</p>
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-car"></i>
-                                                <p>1 Garage</p>
+                                                <i class="bi bi-award"></i>
+                                                <p>8 Awards</p>
                                             </li>
                                         </ul>
                                     </div>

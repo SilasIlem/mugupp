@@ -20,10 +20,6 @@ class CreateCountriesTable extends Migration
                 ->references('id')
                 ->on('nationalities')
                 ->onDelete('cascade');
-            $table->foreignId('profile_id')
-                ->references('id')
-                ->on('profiles')
-                ->onDelete('cascade');
         });
     }
 

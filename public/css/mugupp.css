@@ -177,7 +177,7 @@ section h1 {
     width : 12rem;
 }
 
-#preloader h1 {
+#preloader h1, #m-name {
     font-size : 4rem;
     margin : 1rem;
     color : var(--color-primary-main);
@@ -231,11 +231,6 @@ section h1 {
     padding-top : 2px;
     border-radius : 12px;
     text-align : center;
-}
-
-#m-name img {
-    width : 200px;
-    height : 80px;
 }
 
 #login-opener {
