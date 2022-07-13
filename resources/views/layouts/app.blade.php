@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Mugupp</title>
+        <title>{{ Auth::user()->name }}</title>
 
         <link rel="short icon" href="{{ asset('images/Mugupp ordinary.png')}}">
         <!-- Fonts -->
@@ -13,37 +13,710 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/DocReset.css')}}">
         <link rel="stylesheet" href="{{ asset('css/bootstrap-icons/bootstrap-icons.css') }}">
 
+        @yield('imports')
         <style>
-            
-        #logo {
-            height : 30px;
-            width : 30px;
-        }
-        .m-nav-icon {
-            font-size : 24px;
-            font-weight : 800;
-            color : #07649f;
-            padding : 0px 12px;
-            margin : 0px 12px;
-        }
+            body {
+                background : var(--color-light);
+            }
 
-        .truck-out {
-            padding : 4px;
-            margin-top : 16px;
-        }
+            #preloader {
+                height : 100vh;
+                width : 100vw;
+                background : var(--color-light);
+                color : var(--color-dark);
+                position : fixed;
+                top : 0px;
+                left : 0px;
+                z-index : 9999;
+                animation : opac 4.4s forwards;
+                display : flex;
+                justify-content : center;
+                align-items : center;
+                pointer-events : none;
+            }
+
+            #preloader #progress {
+                animation : grow 3.4s ease-in-out forwards;
+                position : absolute;
+                top : 0px;
+                left : 0px;
+                height : 2px;
+            }
+
+            @keyframes grow {
+                0% {
+                    width : 0px;
+                    background : var(--color-orange);
+                }
+                
+                50% {
+                    width : 60vw;
+                    background : var(--color-orange);
+                }
+
+                100% {
+                    width : 100vw;
+                    background : var(--color-red);
+                }
+            }
+
+            @keyframes opac {
+                90% {
+                    opacity : 1;
+                }
+                
+                100% {
+                    opacity : 0;
+                }
+            }
+
+            #preloader h1 {
+                width : 320px;
+                margin-left : -1.2rem;
+                text-align : center;
+                font-size : 1.8rem;
+                color : var(--color-primary-main);
+                letter-spacing : -4.8px;
+                font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+            }
+
+            #preloader h1 {
+                margin-top : -100px;
+                font-size : 3rem;
+                letter-spacing : -8px;
+            }
+
+            nav {
+                position : fixed;
+                left : 0px;
+                padding-top : 88px;
+                top : 0px;
+                width : 280px;
+                background : var(--color-primary-main);
+                display : flex;
+                color : var(--color-white);
+                flex-direction : column;
+                height : 100vh;
+                padding-bottom : 80px;
+                transition : .1s;
+                z-index : 999;
+                overflow-y : scroll;
+                overflow-x : hidden;
+                overscroll-behaviour : 
+                animation : pointable 2s forwards;
+            }
+
+            nav::-webkit-scrollbar {
+                display : none;
+            }
+
+            nav > i {
+                position : absolute;
+                right : 4px;
+                top : 8px;
+                border-radius : 50%;
+                background : var(--color-primary-main);
+                height : 40px;
+                width : 50px;
+                padding : 8px 14px;
+                font-size : 1.6rem;
+            }
+
+            nav ul {
+                display : flex;
+                flex-direction : column;
+                width : 100%;
+                gap : .4rem;
+                min-height : max-content;
+                margin : .8rem 0px 1.2rem;
+            }
+
+            nav ul li {
+                width : 100%;
+                display : flex;
+                gap : 1rem;
+                position : relative;
+                font-size : 1rem;
+                height : 48px;
+                transition : .4s linear;
+            }
+
+            nav ul li h4 {
+                width : 100%;
+                padding-top : 14px;
+                height : 100%;
+                padding-left : 46px;
+            }
+
+            nav ul li i {
+                position : absolute;
+                left : 28px;
+                padding-top : 16px;
+                font-weight : 250;
+            }
+
+            nav ul [class*=" bi-"]::before {
+                font-weight : 300 !important;
+            }
+
+            nav > h5 {
+                text-align : center;
+                font-size : 1.4rem;
+                letter-spacing : 6px;
+                font-weight : 400;
+                font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                position : absolute;
+                top : 12px;
+                right : 90px;
+            }
+
+            nav > h6 {
+                padding-left : 1.5rem;
+                font-size : 1.2rem;
+                font-weight : 400;
+            }
+
+            nav ul li:hover, #navlinks li.active {
+                background : var(--color-light);
+                color : var(--color-gray);
+            }
+
+            #navlinks li.active {
+                display : none;
+            }
+
+            nav ul li:hover::before {
+                content: "";
+                left: 0px;
+                position: absolute;
+                height: 100%;
+                width: 4px;
+                background: var(--color-primary-main);
+            }
+
+            #profile_img {
+                padding: 6px 8px;
+                border-radius: 6px;
+                box-shadow: 0px 0px 6px var(--color-dark);
+                margin: 12px auto;
+                background-color: var(--color-light);
+                align-items: center;
+                max-width: 260px;
+                display: flex;
+                justify-content : center;
+                flex-wrap : wrap;
+                gap: 10px;
+                position: relative;
+            }
+
+            #prof_img--main {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+            }
+
+            #me {
+                text-align: left;
+                width : 160px;
+                color: var(--color-dark);
+            }
+
+            #me h1 {
+                font-weight: 400;
+                font-size: 1.4rem;
+            }
+
+            #me p {
+                font-weight : 300;
+                font-size : .8rem;
+            }
+
+            nav.shrink {
+                width : 56px;
+                height : 98%;
+                top : 1%;
+                padding : 0px;
+                padding-top : 30px;
+                left : 10px;
+                border-radius : 8px;
+                background : var(--color-white);
+                box-shadow : 0px 0px 6px var(--color-gray);
+                gap : 4px;
+                justify-content : center;
+                animation : pointable 2s forwards;
+            }
+
+            @keyframes pointable {
+                from {
+                    pointer-events : none;
+                }
+
+                to {
+                    pointer-events : initial;
+                }
+            }
+
+            #nav.shrink > i {
+                font-size : 1.45rem;
+                position : absolute;
+                top : 12px;
+                left : 16px;
+                width : max-content;
+                height : max-content;
+                border-radius : 0px;
+                background : none;
+                padding : 0px;
+                color : var(--color-gray);
+            }
+
+            nav.shrink > ul {
+                gap : 10px;
+                height : max-content;
+                margin-bottom : 8px;
+            }
+
+            nav.shrink ul h4 {
+                display : none;
+            }
+
+            nav.shrink li {
+                display : flex;
+                justify-content: center;
+                align-items : center;
+            }
+
+            nav.shrink #navlinks li.active, nav.shrink ul li:hover {
+                background : var(--color-lemon);
+                border-radius : 4px;
+                width : 38px;
+                height : 38px;
+                margin : auto;
+            }
+
+            nav.shrink #navlinks li.active::after, nav.shrink ul li:hover::after {
+                content : '';
+                background : var(--color-lemon);
+                height : 48px;
+                position : absolute;
+                right : -10px;
+                top : -6px;
+                width : 3px;
+            }
+
+            nav.shrink ul li:hover h4 {
+                display : block;
+                position : absolute;
+                left : 140%;
+                min-width : 180px;
+                text-align : center;
+                border-radius : 3px;
+                padding : 8px 16px;
+                box-shadow : 0px 0px 4px var(--color-dark);
+                background : var(--color-white);
+                color : var(--color-primary-main);
+            }
+
+            nav.shrink ul li i {
+                position : static;
+                color : var(--color-gray);
+            }
+
+            nav.shrink ul li.active i, nav.shrink ul li:hover i {
+                color : var(--color-white);
+            }
+
+            nav.shrink a#logout {
+                display : flex;
+                justify-content: center;
+                align-items : center;
+                padding : 0px;
+            }
+
+            nav.shrink > h5, nav.shrink > h6 {
+                display : none;
+            }
+
+            nav.shrink ul li:hover::before {
+                display : none;
+            }
+
+            nav.shrink #profile_img {
+                padding : 0px;
+                border-radius: 24px;
+                box-shadow: none;
+                margin: 6px auto;
+                background: none;
+                align-items: center;
+                display: flex;
+                justify-content : center;
+                gap : 0px;
+                position: relative;
+            }
+
+            nav.shrink #prof_img--main {
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+            }
+
+            nav.shrink #me {
+                display : none;
+            }
+
+            .studying {
+                height : 2.5rem;
+                width : 2.5rem;
+                border-radius : 0px;
+                background : none;
+                padding : 0px;
+            }
+
+            main {
+                position : absolute;
+                left : 280px;
+                min-height: 100vh;
+                width : calc(100vw - 280px);
+            }
+
+            #notification-box {
+                position : fixed;
+                z-index : 9999999;
+                font-size : 1.2rem;
+                display : flex;
+                gap : 1rem;
+                justify-content: flex-end;
+                right : 2rem;
+                top : 2rem;
+                display : none;
+                transition : .4s;
+                transform : translateX(-150%);
+            }
+
+            #notification-box > div {
+                width : 280px;
+                position : relative;
+                border-radius : 3px;
+                font-size : .86rem;
+                padding : 16px 2.2rem;
+                border-radius : 6px;
+                background : var(--color-dark);
+                color : var(--color-white);
+            }
+
+            #notification-box .bi-x {
+                position : absolute;
+                right : .7rem;
+                top : .7rem;
+            }
+
+            #notification-box.show {
+                transform : translateX(0%);
+                display : flex;
+            }
+
+            #main.stretch {
+                min-width : calc(100vw - 76px);
+                left : 76px;
+            }
+
+            #float {
+                position : fixed;
+                right : 1.1rem;
+                bottom : 1.1rem;
+                z-index : 99;
+            }
+
+            #float > button {
+                height : 50px;
+                width : 50px;
+                box-shadow : 0px 0px 8px var(--color-light-blue);
+                display : flex;
+                justify-content : center;
+                align-items : center;
+                padding-top : 4px;
+                color : var(--color-primary-main);
+                border-radius : 40%;
+                background : var(--color-white);
+            }
+
+            #float > div {
+                position : absolute;
+                box-shadow : 0px 0px 8px var(--color-light-blue);
+                bottom : 56px;
+                right : 6px;
+                min-height : 250px;
+                min-width : 200px;
+                display : none;
+                flex-direction : column;
+                padding : .7rem;
+                gap : 1rem;
+                width : max-content;
+                background : var(--color-white);
+            }
+
+            #float.show > div {
+                display : flex;
+            }
+
+            #float > div div {
+                display : flex;
+                width : 100%;
+                gap : 1rem;
+                align-items : center;
+            }
+
         </style>
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+
+        <nav id = "nav" class = "shrink scrolless">
+            <i id = "nav-expand" class = "bi bi-list"></i>
+        
+            <h5>Mugupp</h5>
+
+            <h6>Me</h6>
+            <ul id = "navlinks">
+                
+                <a href="{{ route('dashboard') }}" onclick = "{{ Route::current()->getName() == 'dashboard' ? 'javascript:void(0);' : '' }}">
+                    <li class = "{{ Route::current()->getName() == 'dashboard' ? 'active' : ''}}">
+                        <span>
+                            <i class = "bi bi-command"></i>
+                        </span>
+                        <h4>Dashboard</h4>
+                    
+                    </li>
+                </a>
+               
+                <a href = "{{ route('contacts') }}">
+                    <li class = "{{ Route::current()->getName() == 'contacts' ? 'active' : ''}}">
+                        <span>
+                            <i class = "bi bi-telephone"></i>
+                        </span>
+                        <h4>Contacts</h4>
+                    </li>
+                
+                </a>
+              
+                <a href="{{ route('notifications') }}">
+                    <li class = "{{ Route::current()->getName() == 'notifications' ? 'active' : ''}}">
+
+                        <span><i class ="bi bi-bell"></i></span>
+                        <h4>Notifications</h4>
+                        
+                    </li>
+                </a>
+                
+                <a href="{{ route('mail') }}">
+                    <li class = "{{ Route::current()->getName() == 'mail' ? 'active' : ''}}">
+
+                        <span><i class ="bi bi-envelope-open"></i></span>
+                        <h4>Mailbox</h4>
+            
+                    </li>
+                </a>
+               
+                <a href="{{ route('create-book') }}">
+                    <li class = "{{ Route::current()->getName() == 'create-book' ? 'active' : ''}}">
+
+                        <span><i class ="bi bi-brush"></i></span>
+                        <h4>My Books</h4>
+            
+                    </li>
+                </a>
+                                
+                <a href = "{{ route('study') }}">
+                    <li>
+                        <span>
+                            <i class = "bi bi-journal-richtext"></i>
+                        </span>
+                        <h4>Study</h4>
+                    </li>
+                
+                </a>
+
+            </ul>
+
+            <h6>Academia</h6>
+
+            <ul>
+         
+                <a href="{{ route('academe') }}">
+                    <li>
+                        <span>
+                            <i class = "bi bi-globe2"></i>
+                        </span>
+                        <h4>The Academe</h4>
+            
+                    </li>    
+                </a>
+
+                <a href = "{{ route('districts') }}">
+                    <li class = "{{ Route::current()->getName() == 'districts' ? 'active' : ''}}">
+                        <span><i class ="bi bi-geo"></i></span>
+                        <h4>Academia Districts</h4>
+                    </li>
+                </a>
+            
+                <a href = "{{ route('booths') }}">
+                    <li class = "{{ Route::current()->getName() == 'booths' ? 'active' : ''}}">
+                        <span><i class ="bi bi-chat-dots"></i></span>
+                        <h4>Chat Booths</h4>
+                    </li>
+                </a>
+                <a href = "{{ route('hall') }}">
+                    <li>
+                        <span><i class ="bi bi-building"></i></span>
+                        <h4>The Hall</h4>
+                    </li>
+                </a>
+                
+                <a href = "{{ route('library') }}">
+                    <li class = "{{ Route::current()->getName() == 'library' ? 'active' : ''}}">
+                        <span><i class ="bi bi-book"></i></span>
+                        <h4>The Library</h4>
+                    </li>
+                </a>
+                
+                <a href="{{ route('ast') }}">
+                    <li class = "{{ Route::current()->getName() == 'ast' ? 'active' : ''}}">
+                        <span><i class ="bi bi-broadcast-pin"></i></span>
+                        <h4>The Mast</h4>
+                    </li>
+                </a>
+
+                <a href="{{ route('settings') }}">
+                    <li>
+                        <span><i class = "bi bi-gear"></i></span>
+                        <h4>Settings</h4>
+                    </li>
+                </a>
+                
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a id = "logout" onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                        <li>
+                            
+                            <span><i class = "bi bi-power"></i> </span><h4>Log Out</h4>
+                    
+                        </li>
+                    </a>
+                </form>
+                
+            </ul>
+
+            <a href="{{ route('profile') }}">
+                <div id = "profile_img">
+
+                    <img src="{{ asset('storage/prof-pics/' . Auth::user()->user_pic) }}" alt="" id = "prof_img--main">
+                
+                    <div id = me>
+                        
+                        <h1>{{ Auth::user()->name }}</h1>
+                        <p>{{ Auth::user()->email }}</p>
+
+                    </div>
+                </div>
+            </a>
+
+        </nav>
+
+        <div id="notification-box">
         </div>
+
+        <div id="preloader">
+            <div id="progress"></div>
+            <h1>Mugupp</h1>
+        </div>
+
+        <div id="float">
+            <button>
+                <i class = "bi bi-diamond-fill"></i>
+            </button>
+            <div>
+                
+                <a href = "{{ route('study') }}">
+                    <div>
+                        <img src="{{ asset('images/Studying-rafiki.svg') }}" class = "studying" alt="">
+                        <h4>Study</h4>
+                    </div>
+                </a>
+
+            </div>
+        </div>        
+
+
+        <!-- Page Content -->
+        <main id = "main" class = "stretch">
+            {{ $slot }}
+        </main>
+        <script src = "{{ asset('js/jquery.min.js') }}"></script>
+        <script>
+            const navExpand = document.getElementById('nav-expand');
+            const nav = document.getElementById('nav');
+            const main = document.getElementById('main');
+            const float = document.getElementById('float');
+
+            float.querySelector('button').addEventListener('click', () => {
+                float.classList.toggle('show');
+            })
+
+            navExpand.addEventListener('click', () => {
+                nav.classList.toggle('shrink');
+                main.classList.toggle('stretch');
+            });
+
+            notifier = document.getElementById('notification-box');
+
+            function closeNotification(icon) {
+                notifier.removeChild(icon.closest('div'));
+            }
+
+            $.ajax({
+                url : '/unseen-notifications/' + {{Auth::user()->id}},
+                method : 'GET',
+                success : (data) => {
+                    data.data.forEach( e => {
+                        notifier.innerHTML += `
+                            <div>
+                                <i class = "bi bi-x" onclick = "closeNotification(this);"></i>
+                                <p>${e.text}</p>
+                            </div>
+                        `;
+                        notifier.classList.add('show');
+                    })
+                }
+            })
+
+            setInterval(() => {
+                $.ajax({
+                    url : '/unseen-notifications/' + {{Auth::user()->id}},
+                    method : 'GET',
+                    success : (data) => {
+                        data.data.forEach( e => {
+                            setTimeout(() => {
+                                notifier.innerHTML += `
+                                    <div>
+                                        <i class = "bi bi-x" onclick = "closeNotification(this);"></i>
+                                        <p>${e.text}</p>
+                                    </div>
+                                `;
+                                notifier.classList.add('show');
+                            }, 4000);
+                        })
+                    }
+                })
+            }, 40000);
+        </script>
+        @yield('scripts')
     </body>
 </html>

@@ -1,0 +1,483 @@
+#container {
+    padding-top : 6rem;
+}
+
+#container > h1 {
+    font-size : 1.4rem;
+    font-weight : 200;
+    color : var(--color-gray);
+    text-align : center;
+    margin : 3rem auto 1rem;
+    text-transform: uppercase;
+}
+
+nav {
+    position : fixed;
+    top : 0px;
+    width : 100vw;
+    height : 3rem;
+    display : flex;
+    z-index : 99999;
+    justify-content : space-between;
+    align-items : center;
+    background : var(--color-white);
+    box-shadow : 0px 0px 6px var(--color-dark);
+    padding : 0px 1.2rem;
+}
+
+nav ul {
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+    gap : 1rem;
+}
+
+nav h1 {
+    width : 320px;
+    margin-left : -1.2rem;
+    text-align : center;
+    font-size : 1.8rem;
+    color : var(--color-primary-main);
+    letter-spacing : -4.8px;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#tray {
+    display : flex;
+    justify-content : space-between;
+    gap : 1.2rem;
+    align-items : center;
+    height : 100%;
+    padding : 12px;
+}
+
+#tray > ul {
+    display : flex;
+    gap : .8rem;
+    align-items : center;
+    border-radius : 6px;
+    padding : 4px 12px;
+    box-shadow : inset 0px 0px 4px var(--color-primary-main);
+}
+
+#tray > ul > i {
+    color : var(--color-gra);
+    font-size : 1rem;
+}
+
+#tray button {
+    height : 30px;
+    width : 60px;
+    border-radius : 4px;
+    color : white;
+    background : var(--color-primary-main);
+    margin : 0px 12px;
+}
+
+#tray input {
+    width : 300px;
+    height : 30px;
+    padding-bottom : 2px;
+}
+
+#tray > div {
+    display : flex;
+    gap : .8rem;
+}
+
+#tray > img {
+    height : 40px;
+    width : 40px;
+    border-radius : 50%;
+}
+
+
+#welcome {
+    width : 70vw;
+    border-radius : 8px;
+    margin : 0px auto;
+    position : relative;
+    background : url("../images/jess-bailey-q10VITrVYUM-unsplash.jpg"), var(--color-primary-main);
+    background-blend-mode: multiply;
+    min-height : 60vh;
+    padding-top : 4rem;
+    background-size : cover;
+    overflow : hidden;
+}
+
+#welcome > div {
+    height : max-content;
+    width : 100%;
+    position : relative;
+}
+
+#welcome div h5 {
+    height : 50px;
+    width : 100%;
+    margin : auto;
+    position : absolute;
+    top : 175px;
+    text-align : center;
+    color : white;
+    text-shadow : 0px 0px 4px #07649f;
+    font-size : 26px; 
+}
+
+#topboard {
+    max-height : 120px;
+    max-width : 80%;
+    margin : 0px auto;
+    border-bottom : 3px solid white;
+    padding : 16px;
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+}
+
+#topboard h1 {
+    font-size : 60px;
+    color : white;
+    font-weight : bolder;
+}
+
+#topboard ul {
+    display : flex;
+    color : white;
+    justify-content : space-around;
+    align-items : center;
+    width : 300px;
+}
+
+#ads {
+    width : 90%;
+    display : flex;
+    justify-content: center;
+    margin : 80px 5%;
+}
+
+#ads ul {
+    display : flex;
+    flex-wrap : wrap;
+    width : 100%;
+    justify-content : center;
+    align-items : center;
+    margin-bottom : 8px;
+    gap : 1.5rem;
+}
+
+#ads li {
+    width : 240px;
+    height : 250px;
+    display : flex;
+    flex-direction : column;
+    gap : 2rem;
+    color : var(--color-dark);
+    font-weight: 300;
+    text-align : center;
+    background : white;
+    align-items : center;
+    justify-content : space-around;
+    border-radius : 4px;
+    box-shadow : 0px 0px 6px var(--color-gray);
+    padding : 12px;
+    margin : 16px;
+}
+
+#ads img {
+    height : 120px;
+    border-radius : 20%;
+    width : 110px;
+}
+
+#topshelf.swiper {
+    height : 280px;
+    width : 620px;
+    margin : 2rem auto 0px;
+}
+
+.swiper-slide {
+    width : 500px;
+    display : flex;
+    gap : 1rem;
+    height : 100%;
+}
+
+.stand {
+    width : 650px;
+    margin : -16px auto;
+    height : 150px;
+}
+
+.stand img {
+    height : 100%;
+    width : 100%;
+}
+
+.swiper-slide img  {
+    width : 270px;
+    height : 100%;
+}
+
+#bookshelf {
+    width : 100;
+    padding : 1rem;
+    display : grid;
+    grid-template-columns : 280px auto;
+    grid-gap : 1rem;
+}
+
+#bookshelf .categories {
+    margin-left : 10%;
+}
+
+.categories h1 {
+    color : var(--color-gray);
+    font-size : 1.2rem;
+    text-transform : uppercase;
+    margin : 1rem;
+}
+#bookshelf .categories > ul {
+    display : flex;
+    flex-direction : column;
+    gap : 2rem;
+}
+
+.categories > ul > li {
+    height : max-content;
+}
+
+.categories details summary {
+    font-size : 1.15rem;
+    font-weight : 300;
+    text-transform : uppercase;
+    margin : .8rem;
+}
+
+.categories details ul {
+    display : flex;
+    flex-direction : column;
+    gap : .7rem;
+    font-size : 1.06rem;
+    padding-left : 60px;
+}
+
+#top-authors {
+    margin-top : 60px;
+    width : 100%;
+    box-shadow : inset 0px 0px 4px var(--color-gray);
+    padding : 1rem;
+}
+
+#top-authors legend {
+    background : var(--color-light);
+}
+
+#top-authors ul {
+    display : flex;
+    flex-direction : column;
+    gap : .8rem;
+}
+
+#shelf {
+    display : flex;
+    float : right;
+    width : 100%;
+    flex-wrap : wrap;
+    justify-content: space-between;
+    padding : 20px;
+    box-shadow : inset 0px 0px 4px grey;
+}
+
+#shelf > ul {
+    gap : 3rem;
+    width : 100%;
+    display : flex;
+    flex-direction: column;;
+}
+
+#shelf > ul > li {
+    margin : 12px 30px;
+    width : 100%;
+}
+
+#shelf h1 {
+    font-size : 1.3rem;
+    text-transform: uppercase;
+    color : var(--color-gray);
+    text-align : center;
+    margin : 16px 30px;
+}
+
+#best-sellers {
+    width : 100%;
+}
+
+#best-sellers h1 {
+    text-align : center;
+    font-size : 26px;
+
+    font-weight : bolder;
+}
+
+#best-sellers > ul {
+    height : max-content;
+    display : flex;
+    gap : 1rem;
+}
+
+.best-cards {
+    height : 420px;
+    width : 300px;
+    border-radius : 6px;
+    background : var(--color-light);
+    display : flex;
+    flex-direction : column;
+    position : relative;
+    gap : 1.8rem;
+    align-items : center;
+    box-shadow : 0px 0px 6px var(--color-gray);
+}
+
+.best-cards img {
+    width : 100%;
+    aspect-ratio : 1 / 1;
+}
+
+.best-cards .desc > div {
+    padding : 1rem;
+    text-align : center;
+}
+
+.best-cards > .desc p {
+    text-align : right;
+    margin-top : 30px;
+}
+
+.best-cards p {
+    margin : 20px;
+    font-size : 1.1rem;
+    font-weight : 300;
+    color : var(--color-gray);
+}
+
+.shelfed {
+    width : max-content;
+    position : relative;
+}
+
+.shelfed .more {
+    position : absolute;
+    bottom : -90px;
+    left : 30px;
+    height : max-content;
+    padding : 1rem;
+    width : 100%;
+    background : white;
+    opacity : 0;
+    transition: all .3s;
+    pointer-events : none;
+}
+
+.shelfed .more div {
+    display : flex;
+    gap : 1.2rem;
+    align-items : center;
+}
+
+.shelfed .more img {
+    height : 48px;
+    width : 48px;
+    border-radius : 40%;
+}
+
+.shelfed .more::before{
+    content : 0,
+}
+
+.shelfed:hover .more {
+    opacity : 1;
+    pointer-events : initial;
+}
+
+.shelfed p {
+    max-height : 40px;
+    max-width : 100%;
+    text-overflow : ellipsis;
+    overflow : hidden;
+}
+
+#top-picks {
+    width : 100%;
+    position : relative;
+    margin : 60px auto;
+}
+
+.swiper2 {
+    position : relative;
+    height : max-content;
+    width : 100%;
+}
+
+.swiper2 .swiper-wrapper {
+    display : flex;
+    gap : 1rem;
+}
+
+.swiper2 .swiper-slide {
+    width : 280px;
+    height : max-content;
+}
+
+.swiper2 .swiper-slide img {
+    width : 100%;
+    aspect-ratio : 1 / 1.04;
+}
+
+.swiper2 .swiper-slide .desc > div {
+    padding : 1rem;
+    text-align : center;
+    width : 100%;
+}
+
+.swiper2 .swiper-slide > .desc p {
+    text-align : right;
+    margin-top : 30px;
+}
+
+.swiper2-nav {
+    position : absolute;
+    display : flex;
+    justify-content : space-between;
+    width : 180px;
+    pointer-events : none;
+    background : none;
+    padding : 0px 1.5rem;
+    top : -58px;
+    right : 0px;
+    z-index : 99;
+}
+
+.swiper2-nav button {
+    color : var(--color-dark);
+    height : 60px;
+    width : 60px;
+    border-radius : 30%;
+    pointer-events : initial;
+}
+
+.swiper2-nav i {
+    font-size : 1.5rem;
+    border-radius : 30%;
+}
+
+@media screen and (max-width : 1264px) {
+    #container {
+        padding : 0px;
+    }
+
+    #welcome {
+        width : 100vw;
+        margin : 0px;
+        border-radius : 0px;
+    }
+}

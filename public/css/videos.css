@@ -1,0 +1,341 @@
+#preloader {
+    height : 100vh;
+    width : 100vw;
+    background : var(--color-light);
+    color : var(--color-dark);
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    z-index : 9999;
+    animation : opac 4.4s forwards;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    pointer-events : none;
+}
+
+#preloader #progress {
+    animation : grow 3.4s ease-in-out forwards;
+    position : absolute;
+    top : 0px;
+    left : 0px;
+    height : 3px;
+}
+
+@keyframes grow {
+    0% {
+        width : 0px;
+        background : var(--color-orange);
+    }
+    
+    50% {
+        width : 60vw;
+        background : var(--color-orange);
+    }
+
+    100% {
+        width : 100vw;
+        background : var(--color-red);
+    }
+}
+
+@keyframes opac {
+    90% {
+        opacity : 1;
+    }
+    
+    100% {
+        opacity : 0;
+    }
+}
+
+nav {
+    height : 3rem;
+    width : 100vw;
+    background : url(../images/booksimages/banner-bg.jpg);
+    display : flex;
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    justify-content : space-between;
+    padding : 0px 1.2rem;
+    color : var(--color-dark);
+    align-items : center;
+    z-index : 99;
+    box-shadow : 0px 0px 8px var(--color-gray);
+}
+
+nav > i {
+    font-size : 1.1rem;
+    position : absolute;
+    left : .8rem;
+    top : 1rem;
+    color : var(--color-primary-main);
+}
+
+nav h1, #preloader h1 {
+    width : 320px;
+    margin-left : -1.8rem;
+    text-align : center;
+    font-size : 1.8rem;
+    color : var(--color-primary-main);
+    letter-spacing : -4.8px;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#preloader h1 {
+    margin : 0px;
+    margin-top : -100px;
+    font-size : 3rem;
+    letter-spacing : -8px;
+}
+
+nav ul {
+    display : flex;
+    gap : 1rem;
+    align-items : center;
+    height : 100%;
+    width : max-content;
+    padding : 0px 16px;
+}
+
+nav > label {
+    width : 40%;
+    height : 70%;
+    border-radius : 12px;
+    padding : 4px 1.1rem;
+    background : var(--color-light);
+    display : flex;
+    gap : 1rem;
+    justify-content : space-around;
+    align-items : center;
+    box-shadow : inset 0px 0px 6px -2px var(--color-orange);
+    color : var(--color-dark);
+}
+
+nav > label input {
+    width : 96%;
+    height : 100%;
+    background : inherit;
+}
+
+nav img {
+    height : 28px;
+    width : 28px;
+    border-radius : 40%;
+}
+
+main {
+    margin-top : 3rem;
+    width : 100%;
+    height : max-content;
+}
+
+#side-links {
+    position : fixed;
+    background : url(../images/booksimages/banner-bg.jpg);
+    top : 3rem;
+    width : 320px;
+    padding-top : 3rem;
+    z-index : 99;
+    height : calc(100vh - 3rem);
+    overflow : scroll;
+    overscroll-behavior: contain;
+}
+
+#side-links.shrink {
+    width : 60px;
+}
+
+#side-links::-webkit-scrollbar {
+    width : 4px;
+}
+
+#category-tags {
+    display : flex;
+    gap : 1rem;
+    padding : 1rem;
+    flex-wrap : wrap;
+}
+
+#category-tags li {
+    padding : .4rem .8rem;
+    border-radius : 4px;
+    background : var(--color-light);
+    display : flex;
+    gap : .6rem;
+}
+
+#side-links.shrink #category-tags {
+    flex-direction : column;
+    align-items : center;
+    gap : .6rem;
+    padding : 0px;
+    flex-wrap : initial;
+}
+
+#side-links.shrink #category-tags li {
+    padding : 0px;
+    background : none;
+    width : 100%;
+    margin : 0px;
+    border-radius : 0px;
+}
+
+#side-links.shrink #category-tags span {
+    display : none;
+}
+
+#before {
+    position : fixed;
+    left : 320px;
+    top : 3rem;
+    z-index : 99;
+    opacity : .9;
+    width : 18px;
+    background : url(../images/booksimages/banner-bg.jpg);
+    height : calc(100vw - 3rem);
+}
+
+#before.shrink {
+    left : 60px;
+}
+
+#before::after {
+    content : '';
+    box-shadow : inset 24px 12px 12px -20px var(--color-gray);
+    opacity : .9;
+    position : absolute;
+    left : 0;
+    top : 0;
+    border-top-left-radius : 12px;
+    width : 18px;
+    background : var(--color-light);
+    height : 100%;
+}
+
+#content {
+    margin : calc(3rem + 20px) 20px 20px 340px;
+    width : calc(100vw - 360px);
+    background : url('../images/booksimages/banner-bg.jpg');
+    border-radius : 12px;
+    overflow : hidden;
+    padding : 1rem;
+    box-shadow : 0px 0px 6px var(--color-gray);
+}
+
+#content.shrink {
+    margin-left : 80px;
+    width : calc(100vw - 100px);
+}
+
+#content-before {
+    height : 16px;
+    top : 3rem;
+    background : var(--color-light);
+    width : calc(100vw - 330px);
+    left : 335px;
+    z-index : 9;
+    transition : .4s;
+    position : fixed;
+}
+
+#content-before.content {
+    min-height : calc(100vh - 3rem);
+    overscroll-behavior: contain;
+    overflow-y : scroll;
+}
+
+#content.shrink +
+#content-before {
+    width : calc(100vw - 70px);
+    left : 75px;
+}
+
+#content > h1 {
+    font-size : 1.1rem;
+    margin-left : 40px;
+    margin-bottom : 1.2rem;
+    width : 180px;
+    font-style : italic;
+    position : relative;
+    height : 24px;
+    padding : 6px;
+    text-align : center;
+    word-wrap : none;
+    white-space: none;
+}
+
+#content > h1::before {
+    content : '';
+    width : 40px;
+    height : 1px;
+    background : var(--color-orange);
+    position : absolute;
+    left : -40px;
+    transform : translateY(8px);
+}
+
+#content > h1::after {
+    content : '';
+    width : calc(100vw - (2rem + 580px));
+    height : 1px;
+    background : var(--color-orange);
+    position : absolute;
+    left : 180px;
+    transform : translateY(8px);
+}
+
+#top {
+    background-size: cover;
+    background-position : center center;
+    min-height : 600px;
+    width : 100%;
+    margin-bottom : 2rem;
+}
+
+#top ul, #content ul {
+    display : grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap : 2rem;
+}
+
+#content.shrink ul {
+    grid-template-columns : repeat(6, 1fr);
+}
+
+.video {
+    height : 100%;
+    display : flex;
+    flex-direction : column;
+    background : var(--color-white);
+}
+
+.video > img {
+    margin-bottom : 20px;
+    width : 100%;
+    aspect-ratio: 1 / .6;
+    object-fit : cover;
+    object-position : center center;
+}
+
+.video-details {
+    display : flex;
+    padding : 1rem .6rem;
+    gap : .8rem;
+}
+
+.video-details > img {
+    height : 38px;
+    width : 38px;
+    border-radius : 50%;
+}
+
+.video-details > div {
+    display : flex;
+    flex-direction : column;
+    gap : .6rem;
+}
+.video-details h2 {
+    font-size : 1.05rem;
+}

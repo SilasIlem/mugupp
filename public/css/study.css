@@ -1,0 +1,133 @@
+.phpdebugbar {
+    display : none;
+}
+
+body::-webkit-scrollbar {
+    display : none;
+    height : 100vh;
+}
+
+nav {
+    height : 2.5rem;
+    background : var(--color-dark);
+    color : var(--color-white);
+    position : fixed;
+    bottom : 0px;
+    width : 100%;
+    padding-left : 4rem;
+    padding-right : 1rem;
+    left : 0px;
+    display : flex;
+    justify-content : space-between;
+    gap : .9rem;
+    align-items : center;
+    z-index : 9999;
+    opacity : 0;
+}
+
+nav:hover {
+    opacity : 1;
+}
+
+nav > i {
+    position : absolute;
+    left : 0px;
+    top : 0px;
+    padding-top : 12px;
+    height : 100%;
+    width : 48px;
+    text-align : center;
+    border-right : 1px solid var(--color-white);
+    z-index : 999;
+}
+
+nav > ul {
+    display : flex;
+    gap : .8rem;
+}
+
+nav i {
+    cursor : pointer;
+}
+
+#container {
+    width : 100vw;
+    height : 100vh;
+    color : var(--color-white);
+    background-attachment : fixed;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding : 1rem;
+    background : url('../images/jess-bailey-q10VITrVYUM-unsplash.jpg'), rgba(0, 0, 0, 0.516);
+    background-blend-mode : multiply;
+    filter : brightness(1);
+    background-size : cover;
+    background-repeat : no-repeat;
+    background-position : center center;
+}
+
+#cabinet {
+    height : calc(100vh - 5.5rem);
+    padding : 1rem;
+    display : flex;
+    width : 300px;
+    flex-direction : column;
+    opacity : 0;
+    transition : .4s;
+}
+
+#cabinet.show {
+    opacity : 1;
+}
+
+#cabinet > h2 {
+    font-size : 1.1rem;
+    font-weight : 300;
+}
+
+#cabinet > ul {
+    display : flex;
+    gap : 1rem;
+    margin : 1.8rem 0px;
+    flex-wrap : wrap;
+}
+
+#cabinet li {
+    min-height : 70px;
+    width : 70px;
+    position : relative;
+    cursor : pointer;
+}
+
+#cabinet img {
+    height : 60px;
+    border-radius : 4px;
+    width : 50px;
+    margin : auto;
+}
+
+#cabinet ul i {
+    float : left;
+    margin : 0px 4px 4px;
+    cursor : pointer;
+}
+
+#cabinet ul span {
+    width : 100%;
+    font-size : .6rem;
+    text-transform : uppercase;
+    text-align : start;
+}
+
+#cabinet ul#mug-books span {
+    position : absolute;
+    top : 74px;
+    background : rgba(20, 8, 8, 0.615);
+    left : 0px;
+    display : none;
+    padding : 4px;
+}
+
+#cabinet #mug-books li:hover span {
+    display : inline;
+    z-index : 9;
+}

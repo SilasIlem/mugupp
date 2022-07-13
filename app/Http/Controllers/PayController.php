@@ -8,6 +8,6 @@ class PayController extends Controller
 {
     public function index()
     {
-        return view('paypage');
+        return view('ast.paypage');
     }
 }

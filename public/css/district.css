@@ -1,0 +1,350 @@
+#container {
+    min-height : 196vh;
+    margin : 2vh auto;
+    width : 97vw;
+    display : grid;
+    grid-template-columns : 300px auto;
+    grid-gap : 1rem;
+}
+
+section {
+    padding-top : 5rem;
+    min-height : 50vh;
+}
+
+section > h1 {
+    margin : 1rem;
+    color : var(--color-gray);
+}
+
+#content {
+    grid-gap : .8rem;
+    border-right : 1px solid var(--color-gray);
+}
+
+#district-sidebar ul {
+    display : flex;
+    flex-direction : column;
+    margin-top : 1.2rem;
+    gap : 1.2rem;
+    margin-left : 16px;
+}
+
+#district-sidebar li {
+    padding : 12px 2rem;
+    width : 100%;
+    font-size : 1.4rem;
+    font-weight : 350;
+    color : var(--color-gray);
+}
+
+#district-sidebar li.active {
+    background : var(--bg);
+    color : var(--color-white);
+    transform : translateX(-1.8rem);
+}
+
+#district-content {
+    box-shadow : 0px 0px 4px var(--color-light-blue);
+}
+
+#district-top {
+    min-height : 80vh;
+    width : 100%;
+    color : var(--color-white);
+    padding : 1.2rem;
+    background : var(--bg-img), var(--bg);
+    background-blend-mode : multiply;
+    position : relative;
+    background-size : cover;
+    background-position : center center;
+    background-repeat : no-repeat;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+#district--summary {
+    text-align : center;
+    display : flex;
+    flex-direction : column;
+    gap : 2rem;
+}
+
+#district-top h1 {
+    font-size : 2.3rem;
+    margin : 24px;
+    font-weight : 300;
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align : center;
+}
+
+#district-top h1 span {
+    font-size : 4rem;
+    font-weight : 600;
+}
+
+#district-description {
+    position : absolute;
+    bottom : 1rem;
+    left : 1rem;
+    height : 180px;
+    display : flex;
+}
+
+#top--left img {
+    height : 100%;
+    width : 180px;
+    object-fit : cover;
+    object-position : center center;
+}
+
+#district-description div {
+    padding : 16px;
+    display : flex;
+    flex-direction : column;
+    gap : .6rem;
+    justify-content : flex-end;
+}
+
+nav {
+    width : 100%;
+    z-index : 99999;
+    height : 3rem;
+    position : sticky;
+    top : 0px;
+    background : var(--color-light);
+    box-shadow : 0px 0px 2px var(--color-gray);
+}
+
+nav ul {
+    height : 100%;
+    width : 100%;
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+}
+
+nav li {
+    cursor : pointer;
+}
+
+#district--communities h1 {
+    color : var(--color-gray);
+    margin : 16px;
+}
+
+.community {
+    width : 98%;
+    margin : 2rem auto;
+    border-bottom : 1px solid var(--color-light-blue);
+    margin-bottom : 2rem;
+}
+
+.community h2 {
+    color : var(--color-yellow);
+    font-size : 2.2rem;
+    padding-top : 6px;
+}
+
+.community h3 {
+    color : var(--color-lemon);
+    margin-top : 16px;
+    font-weight : 250;
+    font-size : 1.2rem;
+}
+
+.community--header {
+    background : var(--bg);
+    color : var(--color-white);
+    padding : .8rem 1.2rem;
+    margin-bottom : .6rem;
+}
+
+.community--header > div {
+    display : flex;
+    gap : 1rem;
+}
+
+.community--header > div img {
+    height : 50px;
+    width : 50px;
+    border-radius : 3px;
+}
+
+.community--header > p {
+    margin-top : 1rem;
+    padding : .4rem 1rem;
+}
+
+.community--footer {
+    height : 60px;
+    background : var(--color-white);
+    color : var(--color-gray);
+    display : flex;
+    justify-content : center;
+    gap : 10rem;
+    padding : 16px 30px;
+    text-align : center;
+}
+
+.topic {
+    margin : 16px;
+    display : none;
+    justify-content : space-between;
+    padding : 8px 24px;
+    font-size : 1.1rem;
+    background : var(--color-light);
+    color : var(--color-dark);
+    transform : scaleY(0);
+    transform-origin : top;
+    transition : .2s;
+}
+
+.community:hover .topic {
+    display : flex;
+    transform : scaleY(1);
+}
+
+.topic div {
+    display : flex;
+    width : 300px;
+    justify-content : space-between;
+}
+
+/* 
+tr {
+    display : flex;
+    justify-content : space-around;
+}
+
+th, td {
+    margin : 14px 8px;
+    width : calc(100% / 5);
+    font-size : 1.1rem;
+} */
+
+#district--events h1 { 
+    margin : 1rem;
+    color : var(--color-gray);
+}
+
+.event {
+    display : grid;
+    width : 100%;
+    padding : 0px 1.5rem;
+    margin-bottom : 16px;
+    grid-template-columns : 40% auto;
+    gap : 1rem;
+}
+
+.event > img {
+    width : 100%;
+    min-height : 300px;
+    border-radius : 4px;
+}
+
+.event > div {
+    display : flex;
+    flex-direction : column;
+    gap : 1.6rem;
+    padding : 1rem;
+    box-shadow : 0px 0px 6px var(--color-light-blue);
+}
+
+.district--artisans {
+    display : flex;
+    gap : 1rem;
+    flex-wrap : wrap;
+}
+
+.artisan {
+    position : relative;
+    width : 280px;
+    height : 280px;
+    border-radius: 4px;
+}
+
+.artisan::after {
+    content : '';
+    height : 100%;
+    width : 100%;
+    position : absolute;
+    top : 0px;
+    left : 0px;
+    background : linear-gradient(80%, rgba(255, 255, 255, 0.082), var(--color-dark));
+}
+
+.artisan img {
+    height : 100%;
+    width : 100%;
+    position : absolute;
+    top : 0px;
+    left : 0px;
+}
+
+.artisan > div {
+    width : 100%;
+    height : 100%;
+    color : var(--color-white);
+}
+
+#district--about {
+    padding : .8rem;
+    width : 100%;
+    padding-top : 3.8rem;
+}
+
+#about--top {
+    display : grid;
+    grid-template-columns : 50% auto;
+    gap : 1rem;
+}
+
+#top--left h1 {
+    color : var(--color-gray);
+    margin : 0px 0px 16px;
+}
+
+#top--left p {
+    line-height : 1.8rem;
+    padding-left : 1rem;
+}
+
+#top--right > div {
+    min-height : 260px;
+    width : 70%;
+    border-radius : 6px;
+    border : 1px solid var(--color-light-blue);
+    padding : 1rem;
+    float : right;
+}
+
+#about--bottom {
+    margin-top : 2rem;
+    color : var(--color-gray);
+    font-size : 1.4rem;
+    width : 100%;
+    display : flex;
+    justify-content : space-around;
+    padding : 8px 2.4rem;    
+}
+
+#about--bottom p {
+    display : flex;
+    flex-direction : column;
+    gap : .8rem;
+    text-align : center;
+}
+
+#district-right {
+    display : flex;
+    flex-direction : column;
+    gap : 1.4rem;
+    align-items : center;
+}
+
+#district-right > div {
+    width : 97%;
+    min-height : 300px;
+}

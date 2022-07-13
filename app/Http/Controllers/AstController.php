@@ -9,19 +9,43 @@ class AstController extends Controller
 {
     public function index()
     {
-        if (Auth::user()->paid != 1) {
-            return view('mast');
+        if (Auth::guest()) {
+            return view('ast.ast');
         } else {
-            return view('examroom');
+            if (Auth::user()->paid != 1) {
+                return view('ast.ast');
+            } else {
+                return view('ast.ast');
+            }
         }
     }
 
     public function apply()
     {
-        if (Auth::user()->paid == 1) {
-            return view('examroom');
+        if (!Auth::guest()) {
+            if (Auth::user()->paid == 1) {
+                return view('examroom');
+            } else {
+                abort(408, "It would appear you have not paid to access this feature.");
+            }
         } else {
-            abort(401, "It would appear you have not paid to access this feature.");
+            // return view('ast.register');
+            return 'you never pay Bros';
         }
+    }
+
+    public function login()
+    {
+        //
+    }
+
+    public function pay()
+    {
+        //
+    }
+
+    public function syllabus()
+    {
+        //
     }
 }

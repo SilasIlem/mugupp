@@ -8,6 +8,6 @@ class CreatorController extends Controller
 {
     public function index()
     {
-        return view('creator');
+        return view('books.creator');
     }
 }

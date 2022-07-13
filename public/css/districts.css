@@ -1,0 +1,188 @@
+nav {
+    position : fixed;
+    top : 0px;
+    width : 100vw;
+    height : 4rem;
+    display : flex;
+    z-index : 99999;
+    justify-content : space-between;
+    align-items : center;
+    background : var(--color-white);
+    box-shadow : 0px 0px 6px var(--color-dark);
+    padding : 0px 1.2rem;
+}
+
+nav ul {
+    display : flex;
+    justify-content : space-around;
+    align-items : center;
+    gap : 1rem;
+}
+
+nav h1 {
+    width : 320px;
+    margin-left : -1.2rem;
+    text-align : center;
+    font-size : 1.8rem;
+    color : var(--color-primary-main);
+    letter-spacing : -4.8px;
+    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#district-filter {
+    display : flex;
+    justify-content: flex-end;
+    align-items : center;
+    gap : 1rem;
+}
+
+#district-filter button {
+    padding : 14px 1.5rem;
+    background : var(--color-gray);
+    border-radius : 2px;
+    color : var(--color-white);
+    transition : .2s;
+}
+
+#district-filter button:hover {
+    background : var(--color-orange);
+}
+
+#container {
+    height : 96vh;
+    width : 98%;
+    margin : 5rem auto 2vh;
+}
+
+#districts-container {
+    margin : 14px 16px;
+    width : 100%;
+    min-height : 60vh;
+}
+
+#sort-and-search {
+    display : flex;
+    justify-content : space-between;
+    padding : 8px 16px;
+    width : 100%;
+}
+
+#sort-and-search > input, #sort-and-search > input[type="search"]:focus {
+    width : 340px;
+    padding : 4px;
+    outline : none;
+    border : none;
+    padding-left : 16px;
+    height : 48px;
+    box-shadow : none;
+    background : inherit;
+    border-bottom : 1px solid var(--color-gray);
+}
+
+#sort-and-search > select,
+#sort-and-search > select:focus {
+    background : inherit;
+    border : none;
+    border-radius : 3px;
+    color : var(--color-gray);
+    box-shadow : 0px 0px 3px var(--color-gray);
+}
+
+#districts-container ul {
+    display : flex;
+    margin : 1.2rem 1rem 1rem 2rem;
+    gap : 1.6rem;
+    flex-wrap : wrap;
+}
+
+#content {
+    display : grid;
+    gap : .8rem;
+    grid-template-columns : auto 310px;
+}
+
+.district {
+    width : 250px;
+    overflow : hidden;
+    border-radius : 6px;
+    transition : .2s;
+    filter : brightness(90%);
+    background : var(--color-white);
+}
+
+.district:hover {
+    transform : scale(1.06);
+    filter : brightness(100%);
+    box-shadow : 0px 0px 14px var(--color-dark);
+}
+
+.district img {
+    height : 250px;
+    width : 250px;
+    object-fit : cover;
+    object-position : center center;
+}
+
+.district div {
+    display : flex;
+    flex-direction : column;
+    padding : 1.2rem 1rem 1rem 2rem;
+    gap : .8rem;
+}
+
+.district h1 {
+    font-weight : 600;
+    font-size : 1.1rem;
+    color : var(--color-dark);
+}
+
+.district h5 {
+    font-size : 1rem;
+    color : var(--color-gray);
+    transition : .1s;
+    opacity : 0;
+}
+
+.district p {
+    color : var(--color-orange);
+    font-size : .7rem;
+    opacity : 0;
+    transition: .8s;
+}
+
+.district:hover p, .district:hover h5 {
+    opacity : 1;
+}
+
+
+.district button {
+    width : 100%;
+    padding : 8px;
+    color : var(--color-white);
+    background : var(--color-orange);
+}
+
+#intro {
+    width : 300px;
+    display : flex;
+    flex-direction : column;
+    padding : 14px;
+    border : 1px solid var(--color-white);
+    border-radius : 6px;
+    margin : 16px auto;
+    gap : .8rem;
+    font-size : 1.15rem;
+    font-weight : 350;
+}
+
+#intro h2 {
+    font-size : 1.3rem;
+    color : var(--color-dark);
+    font-weight : 300;
+}
+
+#intro p {
+    padding-left : 12px;
+    margin : 12px;
+    color : var(--color-gray);
+}

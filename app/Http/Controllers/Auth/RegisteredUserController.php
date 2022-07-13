@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use phpDocumentor\Reflection\PseudoTypes\False_;
 
 class RegisteredUserController extends Controller
 {
@@ -21,8 +22,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        User::find(1)->notify(new TaskCompleted);
-        return redirect('/');
+        return view('auth.register');
     }
 
     /**
@@ -36,12 +36,32 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'comment' => ['required', 'string', 'max:255'],
+            'subscription' => ['required', 'string'],
+            'understood' => ['required', 'string'],
+            'bio' => ['required', 'string'],
+            'referrer' => ['required', 'string'],
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        if ($request->hasFile('user_pic')) {
+            $extension = $request->file('user_pic')->getClientOriginalExtension();
+            $fileNameToStoreAs = pathinfo($request->file('user_pic')->getClientOriginalName(), PATHINFO_FILENAME) . time() . '.' . $extension;
+            $request->file('user_pic')->storeAs('public/prof-pics/', $fileNameToStoreAs);
+        } else {
+            $fileNameToStoreAs = '';
+        }
+
+
         $user = User::create([
+            'referrer' => $request->referrer,
+            'subscription' => $request->understood == 'on' ? True : False,
+            'comment' => $request->comment,
+            'bio' => $request->bio,
+            'understood' => $request->understood == 'on' ? True : False,
+            'user_pic' => $fileNameToStoreAs,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),

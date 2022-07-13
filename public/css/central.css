@@ -1,0 +1,113 @@
+nav {
+    height : 48px;
+    width : 100vw;
+    background : var(--color-white);
+    box-shadow : 0px 0px 6px var(--color-dark);
+    display : flex;
+    align-items : center;
+    z-index : 99;
+    position : fixed;
+    justify-content : space-between;
+    padding : 0px 1.2rem;
+}
+
+#logo {
+    height : 35px;
+    width: 120px;
+}
+
+nav ul {
+    display : flex;
+    width : 80%;
+    height : 100%;
+    align-items : center;
+    justify-content : space-around;
+}
+
+.nav-item {
+    position : relative;
+    cursor : pointer;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    transition : .2s;
+}
+
+.nav-item > a {
+    height : 48px;
+    width : 120px;
+    padding : 1rem;
+    text-align : center;
+}
+
+.nav-item:hover > a, .nav-item > a:target {
+    background : var(--color-orange);
+    color : var(--color-white);
+}
+
+.nav-item--extra {
+    display : none;
+    top : 48px;
+    height : max-content;
+    text-align : left;
+    gap : .8rem;
+    font-size : 1.05rem;
+    padding : 1rem;
+    width : max-content;
+    color : var(--color-dark);
+    background : var(--color-white);
+    left : 0;
+    flex-direction : column;
+    position: absolute;
+}
+
+div.nav-item--extra {
+    min-width : 600px;
+    max-width : 600px;
+    left : -150px;
+    flex-wrap : wrap;
+    justify-content : flex-start;
+}
+
+div.nav-item--extra a {
+    width : 150px;
+}
+
+.nav-item--extra li {
+    width : 100%;
+    height : 48px;
+}
+
+.nav-item:hover .nav-item--extra {
+    display : flex;
+}
+#extra-links {
+    height : 100%;
+    width : 140px;
+    display : flex;
+    justify-content: flex-end;
+}
+
+#extra-links > p i {
+    font-size : 1.5rem;
+}
+
+#extra-links > ul {
+    right : 0px;
+    left : auto;
+    width : 200px;
+    color : var(--color-gray);
+}
+
+#welcome {
+    background : url('../images/booksimages/banner-bg.jpg');
+    height : 60vh;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+#welcome h1 {
+    font-size : 2.8rem;
+    color : var(--color-orange);
+}

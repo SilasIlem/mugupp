@@ -1,0 +1,47 @@
+*::-webkit-scrollbar {
+    display : none;
+}
+
+#preloader {
+    background : rgb(245, 247, 246);
+}
+
+#preloader img {
+    height : 120px;
+    width : 140px;
+}
+
+#container {
+    width : 100vw;
+    padding : 1rem;
+}
+
+#description {
+    display : flex;
+    gap : 1.6rem;
+}
+
+#img-container {
+    height : 300px;
+}
+
+#img-container img {
+    height : 100%;
+    aspect-ratio : 1 / 1.07;
+    border-radius : 6px;
+}
+
+.desc {
+    display : flex;
+    flex-direction: column;
+}
+
+.desc h1 {
+    font-size : 1.2rem;
+    color : var(--color-orange);
+}
+
+.desc p {
+    margin : 1rem;
+    color : var(--color-dark);
+}

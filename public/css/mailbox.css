@@ -1,0 +1,66 @@
+#container {
+    display : grid;
+    border-radius : 6px;
+    background : var(--color-white);
+    min-height : 96vh;
+    width : 100%;
+    margin : 2vh 12px;
+    padding : 12px;
+    grid-template-columns : 16% 23% auto;
+}
+
+#mail-nav {
+    padding : 0px 24px;
+}
+
+#mail-nav--top {
+    display : flex;
+    justify-content : space-between;
+    gap : 8px;
+    border-bottom : 1px solid var(--color-gray);
+    padding : 0px 16px;
+    padding-bottom : 12px;
+}
+
+#mail-nav--top i {
+    background : var(--color-light-blue);
+    color : var(--color-primary-main);
+    width : 48px;
+    height : 48px;
+    border-radius : 3px;
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    font-size : 1.8rem;
+}
+
+#mail-nav--top p {
+    color : var(--color-dark);
+    height : 48px;
+    text-align : center;
+    padding : 10px 16px;
+    width : 80%;
+    border-radius : 3px;
+    font-size : 1.4rem;
+}
+
+#mail-nav button {
+    margin : 12px;
+    border-radius : 4px;
+    width : 100%;
+    background : var(--color-primary-main);
+    color : var(--color-white);
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    padding : 8px;
+    height : 50px;
+    font-size : 1.2rem;
+    gap : 14px;
+}
+
+#mail-nav i {
+    display : flex;
+    justify-content: center;
+    align-items : center;
+}

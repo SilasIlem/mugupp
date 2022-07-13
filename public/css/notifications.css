@@ -1,0 +1,145 @@
+#container {
+    padding : 20px;
+    display : grid;
+    grid-template-columns : 18% 40% auto;
+    width : 98%;
+    min-height : 98vh;
+    margin : 1vh 1%;
+    gap : 1rem;
+    border-radius : 8px;
+    background : var(--color-white);
+}
+
+#notice-nav {
+    padding : 24px 12px;
+    display : flex;
+    flex-direction : column;
+    gap : 2rem;
+    background : var(--color-white);
+    color : var(--color-dark);
+}
+
+#notice-nav div {
+    height : 100%;
+    padding : 1rem 8px;
+}
+
+#notice-nav div > h2 {
+    font-size : 1.4rem;
+    font-weight : 300;
+    margin-bottom : 1.2rem;
+}
+
+#notice-nav ul {
+    display : flex;
+    flex-direction : column;
+    gap : 12px;
+}
+
+#notice-nav li {
+    display : flex;
+    justify-content : space-between;
+    width : 100%;
+    height : 48px;
+    align-items : center;
+    padding : 0px 16px;
+    border-bottom : 1px solid var(--color-gray);
+}
+
+#notice-nav input[type="checkbox"]:not(:checked) {
+    background : var(--color-gray);
+    color : var(--color-dark);
+    height : 14px;
+    width : 14px;
+}
+
+#notice-nav input[type="checkbox"]:checked {
+    color : #07649f;;
+}
+
+#notifications {
+    background : var(--color-light);
+    box-shadow : inset 0px 0px 4px var(--color-gray);
+    border-radius : 6px;
+    padding : 12px;
+}
+
+#notifications > input {
+    width : 96%;
+    margin : 12px 2% 40px;
+    border-radius : 4px;
+    padding-left : 16px;
+    box-shadow : inset 0px 0px 2px var(--color-gray);
+    background : var(--color-lemon);
+    color : white;
+}
+
+#notifications > input::placeholder {
+    color : white;
+}
+
+#notifications-category {
+    font-size : 1.4rem;
+    font-weight : 300;
+    margin-bottom : 16px;
+}
+
+#notifications ul {
+    display : flex;
+    flex-direction : column;
+    gap : 12px;
+}
+
+#notifications li {
+    min-height : 60px;
+    width : 100%;
+    align-items : center;
+    display : flex;
+    gap : 1rem;
+    border-bottom : 1px solid var(--color-gray);
+}
+
+#notifications li span {
+    padding : 8px;
+    text-align : center;
+    background : var(--color-primary-main);
+    color : var(--color-white);
+    width : 48px;
+    height : 48px;
+    font-size : 1.2rem;
+    border-radius : 40%;
+}
+
+#notifications li img.round {
+    border-radius : 50%;
+}
+
+#notifications li p {
+    font-size : 1.1rem;
+    color : var(--li-color);
+}
+
+#notifications li small {
+    color : var(--color-gray);
+}
+
+#notice-board {
+    border-radius : 8px;
+    background : var(--color-white);
+    color : var(--color-gray);
+    padding : .8rem;
+}
+
+#notice-board h1 {
+    font-size : 3rem;
+    color : var(--color-green);
+    text-align : center;
+    margin-top : 100px;
+}
+
+#notice-board p {
+    font-size : 1.8rem;
+    color : var(--color-gray);
+    margin-top : 70px;
+    text-align : center;
+}
