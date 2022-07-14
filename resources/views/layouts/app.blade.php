@@ -77,16 +77,11 @@
                 width : 320px;
                 margin-left : -1.2rem;
                 text-align : center;
-                font-size : 1.8rem;
                 color : var(--color-primary-main);
-                letter-spacing : -4.8px;
-                font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-            }
-
-            #preloader h1 {
+                font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 margin-top : -100px;
                 font-size : 3rem;
-                letter-spacing : -8px;
+                letter-spacing : 2px;
             }
 
             nav {
@@ -240,6 +235,7 @@
                 top : 1%;
                 padding : 0px;
                 padding-top : 30px;
+                overflow : initial;
                 left : 10px;
                 border-radius : 8px;
                 background : var(--color-white);
@@ -426,7 +422,7 @@
                 position : fixed;
                 right : 1.1rem;
                 bottom : 1.1rem;
-                z-index : 99;
+                z-index : 9999;
             }
 
             #float > button {
@@ -467,6 +463,78 @@
                 gap : 1rem;
                 align-items : center;
             }
+                        
+            #cabinet {
+                position : fixed;
+                top : 0px;
+                right : 0px;
+                background : var(--color-white);
+                height : 100vh;
+                padding : 1rem;
+                display : flex;
+                z-index : 999;
+                width : 300px;
+                flex-direction : column;
+                opacity : 0;
+                transition : .4s;
+            }
+
+            #cabinet.show {
+                opacity : 1;
+            }
+
+            #cabinet > h2 {
+                font-size : 1.1rem;
+                font-weight : 300;
+            }
+
+            #cabinet > ul {
+                display : flex;
+                gap : 1rem;
+                margin : 1.8rem 0px;
+                flex-wrap : wrap;
+            }
+
+            #cabinet li {
+                min-height : 70px;
+                width : 70px;
+                position : relative;
+                cursor : pointer;
+            }
+
+            #cabinet img {
+                height : 60px;
+                border-radius : 4px;
+                width : 50px;
+                margin : auto;
+            }
+
+            #cabinet ul i {
+                float : left;
+                margin : 0px 4px 4px;
+                cursor : pointer;
+            }
+
+            #cabinet ul span {
+                width : 100%;
+                font-size : .6rem;
+                text-transform : uppercase;
+                text-align : start;
+            }
+
+            #cabinet ul#mug-books span {
+                position : absolute;
+                top : 74px;
+                background : rgba(20, 8, 8, 0.615);
+                left : 0px;
+                display : none;
+                padding : 4px;
+            }
+
+            #cabinet #mug-books li:hover span {
+                display : inline;
+                z-index : 9;
+            }
 
         </style>
 
@@ -491,7 +559,7 @@
                         <span>
                             <i class = "bi bi-command"></i>
                         </span>
-                        <h4>Dashboard</h4>
+                        <h4>Study</h4>
                     
                     </li>
                 </a>
@@ -531,16 +599,6 @@
                         <h4>My Books</h4>
             
                     </li>
-                </a>
-                                
-                <a href = "{{ route('study') }}">
-                    <li>
-                        <span>
-                            <i class = "bi bi-journal-richtext"></i>
-                        </span>
-                        <h4>Study</h4>
-                    </li>
-                
                 </a>
 
             </ul>
@@ -586,8 +644,8 @@
                     </li>
                 </a>
                 
-                <a href="{{ route('ast') }}">
-                    <li class = "{{ Route::current()->getName() == 'ast' ? 'active' : ''}}">
+                <a href="{{ route('mast') }}">
+                    <li class = "{{ Route::current()->getName() == 'mast' ? 'active' : ''}}">
                         <span><i class ="bi bi-broadcast-pin"></i></span>
                         <h4>The Mast</h4>
                     </li>
@@ -639,20 +697,68 @@
         </div>
 
         <div id="float">
-            <button>
+            <button onclick="document.getElementById('cabinet').classList.toggle('show');">
                 <i class = "bi bi-diamond-fill"></i>
             </button>
             <div>
-                
-                <a href = "{{ route('study') }}">
-                    <div>
-                        <img src="{{ asset('images/Studying-rafiki.svg') }}" class = "studying" alt="">
-                        <h4>Study</h4>
-                    </div>
-                </a>
 
             </div>
         </div>        
+
+        
+        <div id="cabinet">
+            <h2>Books</h2>
+            <ul id="mug-books">
+                <li>
+                    <img src="{{ asset('images/faces/1.jpg') }}" />
+                    <span>Life of the hunter's hunted.</span>
+                </li>
+                <li>
+                    <img src="{{ asset('images/faces/2.jpg') }}" />
+                    <span>Life of the hunter's hunted.</span>
+                </li>
+                <li>
+                    <img src="{{ asset('images/faces/3.jpg') }}" />
+                    <span>Life of the hunter's hunted.</span>
+                </li>
+                <li>
+                    <img src="{{ asset('images/faces/4.jpg') }}" />
+                    <span>Life of the hunter's hunted.</span>
+                </li>
+                <li>
+                    <img src="{{ asset('images/faces/5.jpg') }}" />
+                    <span>Life of the hunter's hunted.</span>
+                </li>
+                <li>
+                    <img src="{{ asset('images/faces/6.jpg') }}" />
+                    <span>Life of the hunter's hunted.</span>
+                </li>
+            </ul>
+
+            <h2>Other Documents</h2>
+            <ul>
+                <li>
+                    <i class="bi bi-file-earmark-font-fill"></i>
+                    <span>mts 101 Handouts</span>
+                </li>
+                <li>
+                    <span>MTS 10 Handouts</span>
+                </li>
+                <li>
+                    <span>MTS 01 Handouts</span>
+                </li>
+                <li>
+                    <span>MTS 201 Handouts</span>
+                </li>
+                <li>
+                    <span>MTS 301 Handouts</span>
+                </li>
+                <li>
+                    <span>MTS 401 Handouts</span>
+                </li>
+            </ul>
+        </div>
+
 
 
         <!-- Page Content -->
@@ -666,9 +772,9 @@
             const main = document.getElementById('main');
             const float = document.getElementById('float');
 
-            float.querySelector('button').addEventListener('click', () => {
-                float.classList.toggle('show');
-            })
+            // float.querySelector('button').addEventListener('click', () => {
+            //     float.classList.toggle('show');
+            // })
 
             navExpand.addEventListener('click', () => {
                 nav.classList.toggle('shrink');

@@ -31,7 +31,7 @@
     border-radius : 4px;
     color : var(--color-white);
     padding-left : 16px;
-    box-shadow : inset 0px 0px 6px var(--color-green);
+    box-shadow : inset 0px 0px 6px var(--color-primary-main);
     background : var(--color-lemon);
 }
 
@@ -53,7 +53,7 @@ input::placeholder {
 #contacts h2 {
     font-size : 1.2rem;
     font-weight : 350;
-    color : var(--color-green);
+    color : var(--color-primary-main);
     text-transform : uppercase;
     padding-left : 12px;
     margin-top : 16px;
@@ -70,7 +70,7 @@ input::placeholder {
 }
 
 #contacts p:hover {
-    background : var(--color-green);
+    background : var(--color-primary-main);
     color : var(--color-white);
     transform : translateX(-6px);
 }
@@ -173,7 +173,7 @@ input::placeholder {
     display : flex;
     flex-direction : column;
     color : var(--color-white);
-    background : var(--color-green);
+    background : var(--color-primary-main);
     height : 100%;
     border-radius : 8px;
     padding : 2rem;

@@ -43,9 +43,9 @@
             <div id = "preloader">
                 <h1>Mugupp</h1>
                 <div>
-                    <div style = "animation-delay : -0.16s" class = "loading"></div>
                     <div style = "animation-delay : -0.32s" class = "loading"></div>
                     <div class = "loading"></div>
+                    <div style = "animation-delay : -0.24s" class = "loading"></div>
                 </div>
             </div>
         @endguest
@@ -163,7 +163,7 @@
 
             </div>
 
-            <button id="login-opener">Log In</button>
+            <button id="login-opener"><span id = "see-login">Log In</span><span id = "see-more">Learn More</span></button>
 
             @endguest
 
@@ -204,7 +204,7 @@
                         <div class="language-option">
                             <img src="img/flag.png" alt="">
                             <span>English</span>
-                            <i class="fa fa-angle-down"></i>
+                            <i class="bi bi-angle-down"></i>
                             <div class="flag-dropdown">
                                 <ul>
                                     <li><a href="#">English</a></li>
@@ -246,21 +246,21 @@
                                 <i class="bi bi-phone"></i>
                                 <div class="info-text">
                                     <span>Phone:</span>
-                                    <p>(+12) 345 6789</p>
+                                    <p>+234 3345 6789</p>
                                 </div>
                             </li>
                             <li>
                                 <i class="bi bi-map"></i>
                                 <div class="info-text">
                                     <span>Address:</span>
-                                    <p>01 Naija, <span>NIG</span></p>
+                                    <p>01 Naija, NIG</p>
                                 </div>
                             </li>
                             <li>
                                 <i class="bi bi-envelope"></i>
                                 <div class="info-text">
                                     <span>Email:</span>
-                                    <p>Info.cololib@gmail.com</p>
+                                    <p>mugupp@gmail.com</p>
                                 </div>
                             </li>
                         </ul>
@@ -321,6 +321,75 @@
                 </div>
                 <!-- Search Form Section End -->
 
+                
+                <!-- Top Courses Section Begin -->
+                <div class="top-courses-section spad">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="courses-title">
+                                    <div class="section-title">
+                                        <span>Top Courses For You</span>
+                                        <h2>Top Courses</h2>
+                                    </div>
+                                    <a href="#" class="top-course-all">View All Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-courses-carousel owl-carousel">
+                        @foreach($courses as $course)
+                        <div class="single-top-courses">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="stp-pic">
+                                        <img src="{{ asset('images/booksimages/blog-4.jpg')}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="stp-text">
+                                        <div class="s-text">Free</div>
+                                        <h2>{{ $course->title }}</h2>
+                                        <div class="room-price">
+                                            <span>Free</span>
+                                        </div>
+                                        <div class="courses-location"><i class="bi bi-pin"></i> Denzel Monak</div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        <ul class="room-features">
+                                            <li>
+                                                <i class="bi bi-eye"></i>
+                                                <p>5 attendances</p>
+                                            </li>
+                                            <li>
+                                                <i class="bi bi-award"></i>
+                                                <p>8 Awards</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+                <!-- Top courses Section End -->
+
+                  <!-- Video Section Begin -->
+                  <div class="video-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="video-text">
+                                    <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><i class="bi bi-play"></i></a>
+                                    <h4>Find The Perfect Course for You</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video Section End -->
+             
+
                 <!-- Hero Section Begin -->
                 <section id = "about" class="hero-section">
                     <div class="hero-items owl-carousel">
@@ -328,6 +397,11 @@
                             <div>
                                 <img src="{{ asset('images/Studying-rafiki.svg') }}" alt="">
                                 <h2>Get Right Into The Study Community.</h2>
+                                <p>
+                                    AScholar Education Services provides admissions services to global aspiring students beginning from Nigeria. On our STAS platform, we conduct 
+                                    series of online tests spanning through five (5) stages including quick comprehension passages, audio listening, speaking skills and writing to examine our 
+                                    applicants' academic potentials.
+                                </p>
                             </div>
                            
                         </div>
@@ -408,294 +482,7 @@
                     </div>
                 </section>
                 <!-- How It Works Section End -->
-
-                   <!-- Video Section Begin -->
-                   <div class="video-section set-bg" data-setbg="{{ asset('images/david-rodrigo-Fr6zexbmjmc-unsplash.jpg') }}">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="video-text">
-                                    <a href="https://www.youtube.com/watch?v=EzKkl64rRbM" class="play-btn video-popup"><i class="bi bi-play"></i></a>
-                                    <h4>Find The Perfect Course for You</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Video Section End -->
-             
                 
-                <section id = "team">
-                    <h1>Founders</h1>
-                    <div id = "founders">
-                        <div class = "founder-card">
-                            <img src="{{asset('images/faces/1.jpg')}}" alt="" />
-    
-                            <div class = "founder-description">
-    
-                                <h2>Harrison NWAOGWUGWU</h2>
-                                <small>CEO and Co-Founder, Mugupp</small>
-                                <p> He is a Nigerian and a final year student of Geography Education at Obafemi Awolowo University, Nigeria.</p>
-                       
-                            </div>
-
-                            <div class="founder-social-links">
-                                <i class = "bi bi-facebook" style = "--i-color : var(--color-orange);"></i>
-                                <i class = "bi bi-twitter" style = "--i-color : var(--color-green);"></i>
-                                <i class = "bi bi-whatsapp" style = "--i-color : var(--color-yellow);"></i>
-                            </div>
-                        </div>
-                     
-                        <div class = "founder-card">
-                            <img src="{{asset('images/faces/2.jpg')}}" alt="" />
-                            <div class = "founder-description">
-                                <h2>Silas ILEMOBAYO</h2>
-                                <h4>CTO and Co-Founder, Mugupp</h4>
-                                <p>Silas is a Nigerian, studying Computer Science at Federal University of Technology, Akure, Nigeria. A full stack developer.</p>
-                            </div>
-
-                            <div class="founder-social-links">
-                                <i class = "bi bi-facebook" style = "--i-color : var(--color-orange);"></i>
-                                <i class = "bi bi-twitter" style = "--i-color : var(--color-green);"></i>
-                                <i class = "bi bi-whatsapp" style = "--i-color : var(--color-yellow);"></i>
-                            </div>
-                        </div>
-    
-                    </div>
-                  
-                    <div id = "meet-team">
-                        <a href="{{ route('team') }}"><button>Meet The Team</button></a>
-                    </div>
-                 
-                </section>
-
-                <!-- Feature Section Begin -->
-                <section class="feature-section spad">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section-title">
-                                    <span>Listing From Top Districts</span>
-                                    <h2>Featured Districts</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="feature-carousel owl-carousel">
-                                <div class="feature-item">
-                                    <div class="fi-pic set-bg" data-setbg="{{ asset('storage/districts/large_picture/@mugdistcen.jpg')}}">
-                                        <div class="pic-tag">
-                                            <div class="f-text">Basic Level</div>
-                                            <div class="s-text">Free for All</div>
-                                        </div>
-                                        <div class="feature-author">
-                                            <div class="fa-pic">
-                                                <img src="{{ asset('storage/districts/small_picture/@mugdistcen.jpg')}}" alt="">
-                                            </div>
-                                            <div class="fa-text">
-                                                <span>The central.</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="fi-text">
-                                        <div class="inside-text">
-                                            <h4>The Central District</h4>
-                                            <ul>
-                                                <li><i class="bi bi-house"></i> Naija </li>
-                                            </ul>
-                                            <h5 class="price">* Free</h5>
-                                        </div>
-                                        <ul class="room-features">
-                                            <li>
-                                                <i class="bi bi-people"></i>
-                                                <p>All</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                @foreach($districts as $district)
-                                <div class="feature-item">
-                                    <div class="fi-pic set-bg" data-setbg="{{ asset('storage/districts/large_picture/' . $district->profile->large_picture)}}">
-                                        <div class="pic-tag">
-                                            <div class="f-text">Basic Level</div>
-                                            <div class="s-text">Free for All</div>
-                                        </div>
-                                        <div class="feature-author">
-                                            <div class="fa-pic">
-                                                <img src="{{ asset('storage/districts/small_picture/' . $district->profile->small_picture)}}" alt="">
-                                            </div>
-                                            <div class="fa-text">
-                                                <span>{{ $district->profile->description }}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="fi-text">
-                                        <div class="inside-text">
-                                            <h4>{{ $district->name }}</h4>
-                                            <ul>
-                                                <li><i class="bi bi-house"></i> Naija </li>
-                                                <li><i class="bi bi-brush"></i> {{ $district->created_by }}</li>
-                                            </ul>
-                                            <h5 class="price">* Free</h5>
-                                        </div>
-                                        <ul class="room-features">
-                                            <li>
-                                                <i class="bi bi-people"></i>
-                                                <p>{{ sizeof($district->artisans)}} Artisans</p>
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-award"></i>
-                                                <p>4 Awards</p>
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-heart"></i>
-                                                <p>3</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Feature Section End -->
-                <!-- Top Courses Section Begin -->
-                <div class="top-courses-section spad">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="courses-title">
-                                    <div class="section-title">
-                                        <span>Top Courses For You</span>
-                                        <h2>Top Courses</h2>
-                                    </div>
-                                    <a href="#" class="top-course-all">View All Courses</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="top-courses-carousel owl-carousel">
-                        @foreach($courses as $course)
-                        <div class="single-top-courses">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="stp-pic">
-                                        <img src="{{ asset('images/booksimages/blog-4.jpg')}}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="stp-text">
-                                        <div class="s-text">Free</div>
-                                        <h2>{{ $course->title }}</h2>
-                                        <div class="room-price">
-                                            <span>Free</span>
-                                        </div>
-                                        <div class="courses-location"><i class="bi bi-pin"></i> Denzel Monak</div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        <ul class="room-features">
-                                            <li>
-                                                <i class="bi bi-eye"></i>
-                                                <p>5 attendances</p>
-                                            </li>
-                                            <li>
-                                                <i class="bi bi-award"></i>
-                                                <p>8 Awards</p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-                <!-- Top courses Section End -->
-
-                <!-- Admins Section Begin -->
-                <section class="admin-section spad">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="section-title">
-                                    <span>We Are To Help You</span>
-                                    <h2>Our admins</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="admin-carousel owl-carousel">
-                                <div class="col-lg-3">
-                                    <div class="single-admin">
-                                        <div class="sa-pic">
-                                            <img src="{{ asset('images/faces/5.jpg')}}" alt="">
-                                            <div class="hover-social">
-                                                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                                            </div>
-                                        </div>
-                                        <h5>Harry Nwa <span>Founder & Ceo</span></h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="single-admin">
-                                        <div class="sa-pic">
-                                            <img src="{{ asset('images/faces/2.jpg') }}" alt="">
-                                            <div class="hover-social">
-                                                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                                            </div>
-                                        </div>
-                                        <h5>Silas Ilem <span>CTO & Co-Founder</span></h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="single-admin">
-                                        <div class="sa-pic">
-                                            <img src="img/admin/admin-3.jpg" alt="">
-                                            <div class="hover-social">
-                                                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                                            </div>
-                                        </div>
-                                        <h5>Derrick Lawson <span>Company admins</span></h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="single-admin">
-                                        <div class="sa-pic">
-                                            <img src="img/admin/admin-4.jpg" alt="">
-                                            <div class="hover-social">
-                                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                            </div>
-                                        </div>
-                                        <h5>Clifford Colon <span>Saler Manager</span></h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="single-admin">
-                                        <div class="sa-pic">
-                                            <img src="img/admin/admin-5.jpg" alt="">
-                                            <div class="hover-social">
-                                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                            </div>
-                                        </div>
-                                        <h5>Clifford Colon <span>Saler Manager</span></h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- admin Section End -->
-
                 <!-- Latest Blog Section Begin -->
                 <section class="blog-section latest-blog spad">
                     <div class="container">
@@ -703,7 +490,7 @@
                             <div class="col-lg-12">
                                 <div class="section-title">
                                     <span>Blog & Events</span>
-                                    <h2>News Latest</h2>
+                                    <h2>Latest News</h2>
                                 </div>
                             </div>
                         </div>
@@ -754,6 +541,50 @@
                     </div>
                 </section>
                 <!-- Latest Blog Section End -->
+                
+                <section id = "team">
+                    <h1>Founders</h1>
+                    <div id = "founders">
+                        <div class = "founder-card">
+                            <img src="{{asset('images/faces/1.jpg')}}" alt="" />
+    
+                            <div class = "founder-description">
+    
+                                <h2>Harrison NWAOGWUGWU</h2>
+                                <h5>CEO and Co-Founder, Mugupp</h5>
+                                <p> He is a Nigerian and a final year student of Geography Education at Obafemi Awolowo University, Nigeria.</p>
+                       
+                            </div>
+
+                            <div class="founder-social-links">
+                                <i class = "bi bi-facebook" style = "--i-color : var(--color-orange);"></i>
+                                <i class = "bi bi-twitter" style = "--i-color : var(--color-green);"></i>
+                                <i class = "bi bi-whatsapp" style = "--i-color : var(--color-yellow);"></i>
+                            </div>
+                        </div>
+                     
+                        <div class = "founder-card">
+                            <img src="{{asset('images/faces/2.jpg')}}" alt="" />
+                            <div class = "founder-description">
+                                <h2>Silas ILEMOBAYO</h2>
+                                <h5>CTO and Co-Founder, Mugupp</h5>
+                                <p>Silas is a Nigerian, studying Computer Science at Federal University of Technology, Akure, Nigeria. A full stack developer.</p>
+                            </div>
+
+                            <div class="founder-social-links">
+                                <i class = "bi bi-facebook" style = "--i-color : var(--color-orange);"></i>
+                                <i class = "bi bi-twitter" style = "--i-color : var(--color-green);"></i>
+                                <i class = "bi bi-whatsapp" style = "--i-color : var(--color-yellow);"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+                  
+                    <div id = "meet-team">
+                        <a href="{{ route('team') }}"><button>Meet The Team</button></a>
+                    </div>
+                 
+                </section>
 
                 <!-- Partner Carousel Section Begin -->
                 <section class="partner-section">
@@ -807,7 +638,7 @@
                 </section>
 
                 <section id = "faq">
-                    <h1>Frequestly asked questions</h1>
+                    <h1>Frequently asked questions</h1>
 
                     <div>
                         <h2>What is the Academe?</h2>
@@ -915,9 +746,9 @@
                                     <div class="footer-widget">
                                         <h4>Contact Us</h4>
                                         <ul class="contact-option">
-                                            <li><i class="fa fa-map-marker"></i> 16 Creek Ave. Farming, NY</li>
-                                            <li><i class="fa fa-phone"></i> (+88) 666 121 4321</li>
-                                            <li><i class="fa fa-envelope"></i> info.colorlib@gmail.com</li>
+                                            <li><i class="fa fa-map-marker"></i> Naija, NIG</li>
+                                            <li><i class="fa fa-phone"></i> +234 2121 4321</li>
+                                            <li><i class="fa fa-envelope"></i> mugupp@gmail.com</li>
                                             <li><i class="fa fa-clock-o"></i> Mon - Sat, 08 AM - 06 PM</li>
                                         </ul>
                                     </div>
@@ -933,9 +764,6 @@
          
         </div>
 
-          
-        @guest()
-        
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>
         {{-- 
@@ -943,9 +771,9 @@
         <script src="js/jquery.nice-select.min.js"></script> 
         <script src="js/jquery.magnific-popup.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
-        <script src="js/main.js"></script>
+        @guest()
+        
         <script>
             window.addEventListener('load', () => {
                 setTimeout(() => {
@@ -953,6 +781,7 @@
                     document.getElementById('content').classList.toggle('unhide-content'); 
                 }, 6000)}  
             );
+
         </script>
         @else
 

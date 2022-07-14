@@ -6,7 +6,9 @@
             <h4>Welcome To The</h4>
             <h1>MAST</h1>
             <h2>Let us connect you with the world. . . It's a seamless ride with us!</h2>
-            <button>register</button>           
+            <a href = "{{ route('apply') }}">
+                <button>register</button>
+            </a>
         </div>
     </div>
     <div id = "container">

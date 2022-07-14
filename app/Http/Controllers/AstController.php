@@ -24,7 +24,7 @@ class AstController extends Controller
     {
         if (!Auth::guest()) {
             if (Auth::user()->paid == 1) {
-                return view('examroom');
+                return view('ast.apply');
             } else {
                 abort(408, "It would appear you have not paid to access this feature.");
             }

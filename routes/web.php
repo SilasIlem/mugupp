@@ -59,13 +59,16 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-
 Route::middleware(['auth'])->group(
     function () {
         //Dashboard
-        Route::get('/dashboard', function () {
-            return view('dashboard', ['todos' => Todo::where('user_id', '=', Auth::user()->id)->get(), 'notes' => MuguppNotification::all()]);
+        Route::get('/study', function () {
+            return view('study', ['todos' => Todo::where('user_id', '=', Auth::user()->id)->get(), 'notes' => MuguppNotification::all()]);
         })->name('dashboard');
+
+        Route::get('/academe', function () {
+            return view('academe', ['books' => Book::all(), 'thread' => Thread::with(['topic'])->firstorFail(), 'suggestions' => User::where('id', '!=', Auth::user()->id)->paginate(5), 'topics' => Topic::with(['views', 'threads', 'community'])->get()]);
+        })->name('academe');
 
         Route::get('/settings', function () {
             return view('settings');
@@ -103,11 +106,6 @@ Route::middleware(['auth'])->group(
                 return view('book.read-book', ['book' => Book::where('slug', '=', $book_slug)->firstorFail()]);
             }
         })->name('read-book');
-
-        Route::get('/study', function () {
-            // return view('study', [Study::where('user_id', '=', Auth::user()->id)->firstorFail()]);
-            return view('study');
-        })->name('study');
 
         Route::get('/booths', function () {
             return view('booths');
@@ -196,10 +194,6 @@ Route::middleware(['auth'])->group(
         Route::get('/notifications', function () {
             return view('notifications');
         })->name('notifications');
-
-        Route::get('/academe', function () {
-            return view('academe', ['books' => Book::all(), 'thread' => Thread::with(['topic'])->firstorFail(), 'suggestions' => User::where('id', '!=', Auth::user()->id)->paginate(5), 'topics' => Topic::with(['views', 'threads', 'community'])->get()]);
-        })->name('academe');
 
         Route::get('/follow/{id}', function ($id) {
             if (Follower::all()->isNotEmpty()) {
@@ -316,7 +310,7 @@ Route::get('/event', function () {
     event(new MessageNotification());
 });
 
-Route::get('/ast', [AstController::class, 'index'])->name('ast');
+Route::get('/mast', [AstController::class, 'index'])->name('mast');
 
 Route::get('/superadmin', [SuperAdminController::class, 'index']);
 

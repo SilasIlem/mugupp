@@ -87,3 +87,89 @@
         
     </div>
 </div>
+
+
+                <!-- Admins Section Begin -->
+                <section class="admin-section spad">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section-title">
+                                    <span>We Are To Help You</span>
+                                    <h2>Our admins</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="admin-carousel owl-carousel">
+                                <div class="col-lg-3">
+                                    <div class="single-admin">
+                                        <div class="sa-pic">
+                                            <img src="{{ asset('images/faces/5.jpg')}}" alt="">
+                                            <div class="hover-social">
+                                                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <h5>Harry Nwa <span>Founder & Ceo</span></h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="single-admin">
+                                        <div class="sa-pic">
+                                            <img src="{{ asset('images/faces/2.jpg') }}" alt="">
+                                            <div class="hover-social">
+                                                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <h5>Silas Ilem <span>CTO & Co-Founder</span></h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="single-admin">
+                                        <div class="sa-pic">
+                                            <img src="img/admin/admin-3.jpg" alt="">
+                                            <div class="hover-social">
+                                                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                                                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                                                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <h5>Derrick Lawson <span>Company admins</span></h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="single-admin">
+                                        <div class="sa-pic">
+                                            <img src="img/admin/admin-4.jpg" alt="">
+                                            <div class="hover-social">
+                                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <h5>Clifford Colon <span>Saler Manager</span></h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="single-admin">
+                                        <div class="sa-pic">
+                                            <img src="img/admin/admin-5.jpg" alt="">
+                                            <div class="hover-social">
+                                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                            </div>
+                                        </div>
+                                        <h5>Clifford Colon <span>Saler Manager</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- admin Section End -->
+

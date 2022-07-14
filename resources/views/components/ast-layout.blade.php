@@ -25,11 +25,16 @@
                 display : flex;
                 padding : 0px 20px;
                 align-items : center;
+                z-index : 9;
+                width : 100vw;
+                top : 0px;
                 height : 30px;
                 justify-content : flex-end;
                 gap : 12px;
                 background : var(--color-dark);
                 color : var(--color-white);
+                position : fixed;
+                box-shadow : 0px 0px 12px 4px var(--color-dark);
             }
 
             header #contact {
@@ -38,17 +43,21 @@
                 background : var(--color-green);
                 color : var(--color-white);
                 display : flex;
+                z-index : -1;
                 align-items : center;
                 justify-content : space-around;
+                position : fixed;
+                top : 30px;
             }
 
             nav {
                 height : 6vh;
                 width : 100vw;
                 background : var(--color-white);
-                color : var(--color-gray);
+                color : var(--color-dark);
                 position : sticky;
                 top : 0px;
+                margin-top : 100px;
                 z-index : 999;
                 left : 0px;
                 display : flex;
@@ -69,6 +78,10 @@
                 height : 100%;
                 align-items : center;
                 justify-content : space-around;
+            }
+
+            main {
+                z-index : 99;
             }
         </style>
     </head>
