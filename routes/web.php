@@ -64,7 +64,7 @@ Route::middleware(['auth'])->group(
         //Dashboard
         Route::get('/study', function () {
             return view('study', ['todos' => Todo::where('user_id', '=', Auth::user()->id)->get(), 'notes' => MuguppNotification::all()]);
-        })->name('dashboard');
+        })->name('study');
 
         Route::get('/academe', function () {
             return view('academe', ['books' => Book::all(), 'thread' => Thread::with(['topic'])->firstorFail(), 'suggestions' => User::where('id', '!=', Auth::user()->id)->paginate(5), 'topics' => Topic::with(['views', 'threads', 'community'])->get()]);

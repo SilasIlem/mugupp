@@ -233,7 +233,7 @@
 
                         @else
                         
-                        <a href="{{ route('dashboard') }}">
+                        <a href="{{ route('study') }}">
                             <button>Academe</button>
                         </a>
                         @endguest

@@ -55,7 +55,7 @@
         </label>
 
         <ul>
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('study') }}">
                 <li>
                     <i class = "bi bi-command"></i>
                 </li>

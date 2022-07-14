@@ -33,7 +33,7 @@
                 </form>
             </ul>
 
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('study') }}">
                 <i class = "bi bi-command"></i>
             </a>
 

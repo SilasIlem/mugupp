@@ -477,10 +477,12 @@
                 flex-direction : column;
                 opacity : 0;
                 transition : .4s;
+                pointer-events : none;
             }
 
             #cabinet.show {
                 opacity : 1;
+                pointer-events : initial;
             }
 
             #cabinet > h2 {
@@ -536,6 +538,169 @@
                 z-index : 9;
             }
 
+            @media screen and (max-width : 564px) {
+                nav, nav.shrink {
+                    transform : translateX(-100%);
+                    transition : all .4s;
+                    position : fixed;
+                    left : 0px;
+                    height : 100vh;
+                    padding : 8px;
+                    padding-top : 50px;
+                    top : 0px;
+                    width : 270px;
+                    background : var(--color-primary-main);
+                    display : flex;
+                    color : var(--color-white);
+                    flex-direction : column;
+                    height : 100vh;
+                    padding-bottom : 80px;
+                    transition : .1s;
+                    border-radius : 0px;
+                    z-index : 999;
+                    overflow-y : scroll;
+                    overflow-x : hidden;
+                    overscroll-behaviour : contain;
+                    animation : pointable 2s forwards;
+                }
+
+                nav.nav-out {
+                    transform : translateX(0%);
+                }
+
+                nav > i, nav.shrink > i {
+                    display : none;
+                }
+
+                nav + #nav-expand {
+                    position : fixed;
+                    font-size : 1.2rem;
+                    z-index : 999;
+                    right : 1rem;
+                    top : 1rem;
+                }
+
+                nav ul, nav.shrink ul {
+                    display : flex;
+                    flex-direction : column;
+                    width : 100%;
+                    gap : .4rem;
+                    min-height : max-content;
+                    margin : .8rem 0px 1.2rem;
+                }
+
+                nav ul li, nav.shrink ul li {
+                    width : 100%;
+                    display : flex;
+                    gap : 1rem;
+                    position : relative;
+                    font-size : 1rem;
+                    height : 48px;
+                    transition : .4s linear;
+                }
+
+                nav ul li h4, nav.shrink ul li h4 {
+                    width : 100%;
+                    padding-top : 14px;
+                    height : 100%;
+                    padding-left : 46px;
+                }
+
+                nav ul li i, nav.shrink ul li i {
+                    position : absolute;
+                    left : 28px;
+                    padding-top : 16px;
+                    font-weight : 250;
+                }
+
+                nav ul [class*=" bi-"]::before, nav.shrink ul [class*=" bi-"]::before {
+                    font-weight : 300 !important;
+                }
+
+                nav > h5, nav.shrink > h5 {
+                    text-align : center;
+                    font-size : 1.4rem;
+                    letter-spacing : 6px;
+                    font-weight : 400;
+                    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    position : absolute;
+                    top : 12px;
+                    right : 90px;
+                }
+
+                nav > h6, nav.shrink > h6 {
+                    padding-left : 1.5rem;
+                    font-size : 1.2rem;
+                    font-weight : 400;
+                }
+
+                nav ul li:hover, #navlinks li.active {
+                    background : var(--color-light);
+                    color : var(--color-gray);
+                }
+
+                #navlinks li.active {
+                    display : none;
+                }
+
+                nav ul li:hover::before, nav.shrink ul li:hover::before {
+                    content: "";
+                    left: 0px;
+                    position: absolute;
+                    height: 100%;
+                    width: 4px;
+                    background: var(--color-primary-main);
+                }
+
+                #profile_img {
+                    padding: 6px 8px;
+                    border-radius: 6px;
+                    box-shadow: 0px 0px 6px var(--color-dark);
+                    margin: 12px auto;
+                    background-color: var(--color-light);
+                    align-items: center;
+                    max-width: 260px;
+                    display: flex;
+                    justify-content : center;
+                    flex-wrap : wrap;
+                    gap: 10px;
+                    position: relative;
+                }
+
+                #prof_img--main {
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+
+                #me {
+                    text-align: left;
+                    width : 160px;
+                    color: var(--color-dark);
+                }
+
+                #me h1 {
+                    font-weight: 400;
+                    font-size: 1.4rem;
+                }
+
+                #me p {
+                    font-weight : 300;
+                    font-size : .8rem;
+                }
+
+
+                #main, #main.stretch {
+                    width : 100vw;
+                    left : 0px;
+                    padding : 0px;
+                    margin : 0px;
+                }
+
+                #container {
+
+                }
+            }
         </style>
 
         <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -546,7 +711,7 @@
     </head>
     <body class="font-sans antialiased">
 
-        <nav id = "nav" class = "shrink scrolless">
+        <nav id = "nav" class = "scrolless">
             <i id = "nav-expand" class = "bi bi-list"></i>
         
             <h5>Mugupp</h5>
@@ -554,8 +719,8 @@
             <h6>Me</h6>
             <ul id = "navlinks">
                 
-                <a href="{{ route('dashboard') }}" onclick = "{{ Route::current()->getName() == 'dashboard' ? 'javascript:void(0);' : '' }}">
-                    <li class = "{{ Route::current()->getName() == 'dashboard' ? 'active' : ''}}">
+                <a href="{{ route('study') }}" onclick = "{{ Route::current()->getName() == 'study' ? 'javascript:void(0);' : '' }}">
+                    <li class = "{{ Route::current()->getName() == 'study' ? 'active' : ''}}">
                         <span>
                             <i class = "bi bi-command"></i>
                         </span>
@@ -688,6 +853,10 @@
 
         </nav>
 
+        <button id = "nav-expand" onclick = "document.getElementById('nav').classList.toggle('nav-out');">
+            <i class = "bi bi-list"></i>
+        </button>
+
         <div id="notification-box">
         </div>
 
@@ -762,7 +931,7 @@
 
 
         <!-- Page Content -->
-        <main id = "main" class = "stretch">
+        <main id = "main" class = "">
             {{ $slot }}
         </main>
         <script src = "{{ asset('js/jquery.min.js') }}"></script>
