@@ -195,7 +195,7 @@
                         </li>
 
                         <li>
-                            <a href="{{ route('ast') }}">AST</a>
+                            <a href="{{ route('mast') }}">AST</a>
                         </li>
                        
                     </ul> 
