@@ -21,6 +21,7 @@ html, body {
 	font-family: "Poppins", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing : antialiased;
+    overflow-x : hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -255,6 +256,10 @@ section h1 {
     transition : .2s;
     color : var(--color-white);
     box-shadow : 0px 0px 8px 6px var(--color-white);
+}
+
+#m-name {
+    letter-spacing : 4px;
 }
 
 #landing-bin {
@@ -599,13 +604,15 @@ nav .language-bar {
 }
 
 #top {
-    height : 100vh;
+    min-height : 100vh;
     width : 100vw;
     background : url('../images/david-rodrigo-Fr6zexbmjmc-unsplash.jpg'), rgba(0, 0, 0, 0.342);
     background-blend-mode: multiply;
     background-attachment : fixed;
     background-size : cover;
     display : flex;
+    flex-direction : column;
+    padding-top : 20vh;
     justify-content : center;
     margin : 0px;
     position: relative;
@@ -657,8 +664,8 @@ nav .language-bar {
 
 .nav-bottom {
 	text-align: right;
-    position: absolute;
-    bottom : 8px;
+    display : block;
+    margin-top : 120px;
 }
 
 .nav-bottom ul {
@@ -667,6 +674,7 @@ nav .language-bar {
     justify-content : center;
     gap : 1.8rem;
     list-style: none;
+    flex-wrap : wrap;
 }
 
 .nav-bottom ul li {
@@ -922,6 +930,25 @@ nav .language-bar {
     height : 48px;
 	outline: none;
 	background: transparent;
+}
+
+@media  screen and (max-width : 600px) {
+    .filter-form .second-row .name-wrap .name-text {
+        flex-wrap : wrap;
+    }
+
+    .filter-form .second-row .name-wrap .name-text input {
+        width : 100%;
+    }
+
+    .filter-form .second-row .age-range .age-text {
+        flex-wrap : wrap;
+        flex-direction : row-reverse;
+    }
+
+    .filter-form .second-row .age-range .age-text input {
+        width : 100%;
+    }
 }
 
 .filter-form button.search-btn {

@@ -67,7 +67,7 @@ Route::middleware(['auth'])->group(
         })->name('study');
 
         Route::get('/academe', function () {
-            return view('academe', ['books' => Book::all(), 'thread' => Thread::with(['topic'])->firstorFail(), 'suggestions' => User::where('id', '!=', Auth::user()->id)->paginate(5), 'topics' => Topic::with(['views', 'threads', 'community'])->get()]);
+            return view('academe', ['books' => Book::all(), 'thread' => Thread::with(['topic'])->first(), 'suggestions' => User::where('id', '!=', Auth::user()->id)->paginate(5), 'topics' => Topic::with(['views', 'threads', 'community'])->get()]);
         })->name('academe');
 
         Route::get('/settings', function () {

@@ -52,7 +52,7 @@
             <p><i class = "bi bi-three-dots-vertical"></i></p>
             <ul class="nav-item--extra">
                 <li>
-                    <a href="{{ route('dashboard') }}">Dashboard</a>
+                    <a href="{{ route('study') }}">My Study</a>
                 </li>
                 <li>    
                     <a href="{{ route('academe') }}">Academe</a>

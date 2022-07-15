@@ -10,13 +10,13 @@
 </head>
 <body>
     <nav>
-
+        
         <h1>Mugupp</h1>
 
         <ul>
 
-            <a href="{{ route('dashboard') }}">
-                <li>Dashboard</li>
+            <a href="{{ route('study') }}">
+                <li>My Study</li>
             </a>
      
             <a href="{{ route('academe') }}">

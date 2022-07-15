@@ -48,7 +48,7 @@
                     </div>
                     
                     <ul>
-                        <li><a href="{{ route('dashboard') }}"><i class="bi bi-command"></i></a></li>
+                        <li><a href="{{ route('study') }}"><i class="bi bi-command"></i></a></li>
                         <li><a href="{{ route('questions') }}"><i class = "bi bi-question-octagon"></i></a></li>
                         <li title = "The Hall"><a href="{{ route('hall') }}"><i class = "bi bi-shop"></i></a></li>
                     </ul>
@@ -148,11 +148,11 @@
         
                                 <ul>
                                     <li>
-                                        <a href="{{ route('dashboard') }}">
+                                        <a href="{{ route('study') }}">
                                             <span>
                                                 <i class = "bi bi-columns-gap"></i>
                                             </span>
-                                            <h4>Dashboard</h4>
+                                            <h4>My Study</h4>
                                         </a>
                                     </li>
 
@@ -322,7 +322,7 @@
 
                             <div id="posts">
                                 <img id = "post-shall-load" src="{{ asset('images/9.gif') }}" alt="">
-                                
+{{--                                 
                                 <div class = "post">
                                     <div class="post-head">
                                         <div class = "head-0">
@@ -357,9 +357,9 @@
                                         
                                         <br/>
                                 
-                                        {{-- <div class = "post-media">
+                                        <div class = "post-media">
                                             {{ $thread->media }}
-                                        </div> --}}
+                                        </div>
                                     </div>
 
                                     <div class="post-foot">
@@ -401,7 +401,7 @@
                                     </div>
                                 </div>
                                 
-                                <hr>
+                                <hr> --}}
 
                             </div>
                             

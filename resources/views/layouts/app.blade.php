@@ -108,6 +108,10 @@
                 display : none;
             }
 
+            nav + #nav-expand {
+                display : none;
+            }
+
             nav > i {
                 position : absolute;
                 right : 4px;
@@ -162,7 +166,7 @@
                 font-size : 1.4rem;
                 letter-spacing : 6px;
                 font-weight : 400;
-                font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 position : absolute;
                 top : 12px;
                 right : 90px;
@@ -234,14 +238,14 @@
                 height : 98%;
                 top : 1%;
                 padding : 0px;
-                padding-top : 30px;
+                padding-top : 50px;
                 overflow : initial;
                 left : 10px;
                 border-radius : 8px;
                 background : var(--color-white);
                 box-shadow : 0px 0px 6px var(--color-gray);
-                gap : 4px;
-                justify-content : center;
+                gap : 1rem;
+                justify-content : flex-start;
                 animation : pointable 2s forwards;
             }
 
@@ -574,7 +578,16 @@
 
                 nav + #nav-expand {
                     position : fixed;
-                    font-size : 1.2rem;
+                    display : flex;
+                    justify-content: center;
+                    align-items : center;
+                    height : 48px;
+                    width : 48px;
+                    background : var(--color-white);
+                    box-shadow : 0px 0px 4px var(--color-light);
+                    border-radius : 10%;
+                    padding-top : 10px;
+                    font-size : 1.5rem;
                     z-index : 999;
                     right : 1rem;
                     top : 1rem;
@@ -602,6 +615,7 @@
                 nav ul li h4, nav.shrink ul li h4 {
                     width : 100%;
                     padding-top : 14px;
+                    display : block;
                     height : 100%;
                     padding-left : 46px;
                 }
@@ -671,6 +685,7 @@
                     height: 40px;
                     width: 40px;
                     border-radius: 50%;
+                    background : var(--color-light);
                 }
 
                 #me {
@@ -682,11 +697,13 @@
                 #me h1 {
                     font-weight: 400;
                     font-size: 1.4rem;
+                    display : block;
                 }
 
                 #me p {
                     font-weight : 300;
                     font-size : .8rem;
+                    display : flex;
                 }
 
 
@@ -853,7 +870,7 @@
 
         </nav>
 
-        <button id = "nav-expand" onclick = "document.getElementById('nav').classList.toggle('nav-out');">
+        <button id = "nav-expand" onclick = "document.getElementById('nav').classList.toggle('nav-out'); document.getElementById('nav').classList.remove('shrink'); document.getElementById('main').classList.remove('stretch');">
             <i class = "bi bi-list"></i>
         </button>
 

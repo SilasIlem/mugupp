@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<h lang="en">
+<html lang = "en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
                         <a href = "#district--events"><li>Events</li></a>
                         <a href = "#district--about"><li>About</li></a>
                         <a href="{{ route('academe') }}"><li>Academe</li></a>
-                        <a href="{{ route('dashboard') }}"><li>Dashboard</li></a>
+                        <a href="{{ route('study') }}"><li>Dashboard</li></a>
                     </ul>
                 </nav>
 
@@ -133,4 +133,4 @@
         
     @endcomponent
 </body>
-</h
+</html>

@@ -183,8 +183,8 @@
     padding-left : 30%;
     margin : 1rem;
     color : var(--color-primary-main);
-    letter-spacing : -4.8px;
-    font-family :Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    letter-spacing : 4.8px;
+    font-family : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #sidebar-opener {
