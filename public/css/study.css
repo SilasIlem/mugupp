@@ -236,7 +236,7 @@ section > h2 {
 
 #study-goal-info button:hover {
     color : var(--color-white);
-    background : var(--color-green);
+    background : var(--color-primary-main);
 }
 
 #study-goal-info img {
@@ -300,7 +300,7 @@ section > h2 {
 }
 
 #dates span.event {
-    background : var(--color-green);
+    background : var(--color-primary-main);
     color : var(--color-white);
 }
 

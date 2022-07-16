@@ -39,13 +39,14 @@
 
 #top button {
     height : 50px;
-    width : 120px;
+    padding : 0px 1rem;
     border-radius : 4px;
     border : 1px solid var(--color-white);
 }
 
 #top button:hover {
     background : var(--color-orange);
+    color : var(--color-white);
 }
 
 #container {
@@ -56,7 +57,7 @@
 }
 
 #fundamentals {
-    height : 160px;
+    min-height : 160px;
     width : 100vw;
     color : var(--color-white);
     padding : 1rem;
@@ -111,4 +112,10 @@
 
 .card-body p {
     color : var(--color-dark);
+}
+
+@media screen and (max-width : 460px) {
+    .mast-card {
+        width : 90vw;
+    }
 }

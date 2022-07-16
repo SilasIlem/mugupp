@@ -1,5 +1,10 @@
-<x-app-layout>
+<x-ast-layout>
     <style>
+        #container {
+            padding : 1rem;
+            background : var(--color-light);
+        }
+        
         table {
             margin : 20px auto;
             box-shadow : inset 0px 0px 8px grey;
@@ -28,100 +33,102 @@
             color : var(--color);
         }
     </style>
-    <table>
-        <thead>
-            <th>UserID</th>
-            <th>Total Questions (TQ)</th>
-            <th>Pass (P)</th>
-            <th>Fail (F)</th>
-            <th>Time Difference (TD)</th>
-            <th>Total Mark</th>
-            <th>safety</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
-            </tr>
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
-            </tr>
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
-            </tr>
-         
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i class = "bi bi-check" style = "--color : rgb(255, 0, 0);"></i></td>
-            </tr>
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i class = "bi bi-check" style = "--color : rgb(255, 0, 0);"></i></td>
-            </tr>
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
-            </tr>
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i class = "bi bi-check" style = "--color : rgb(255, 0, 0);"></i></td>
-            </tr>
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i class = "bi bi-check" style = "--color : rgb(255, 0, 0);"></i></td>
-            </tr>
-           
-            <tr>
-                <td>0001</td>
-                <td>25</td>
-                <td>20</td>
-                <td>5</td>
-                <td>787sec</td>
-                <td>80</td>
-                <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
-            </tr>
-        </tbody>
-    </table>
-</x-app-layout>
+    <div id="container">
+        <table>
+            <thead>
+                <th>UserID</th>
+                <th>Total Questions (TQ)</th>
+                <th>Pass (P)</th>
+                <th>Fail (F)</th>
+                <th>Time Difference (TD)</th>
+                <th>Total Mark</th>
+                <th>safety</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
+                </tr>
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
+                </tr>
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
+                </tr>
+            
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i class = "bi bi-check" style = "--color : rgb(255, 0, 0);"></i></td>
+                </tr>
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i class = "bi bi-check" style = "--color : rgb(255, 0, 0);"></i></td>
+                </tr>
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
+                </tr>
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i class = "bi bi-check" style = "--color : rgb(255, 0, 0);"></i></td>
+                </tr>
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i class = "bi bi-check" style = "--color : rgb(255, 0, 0);"></i></td>
+                </tr>
+            
+                <tr>
+                    <td>0001</td>
+                    <td>25</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>787sec</td>
+                    <td>80</td>
+                    <td><i style = "--color : rgb(68, 255, 68);" class = "bi bi-check"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</x-ast-layout>

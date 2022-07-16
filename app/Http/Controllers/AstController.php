@@ -48,4 +48,19 @@ class AstController extends Controller
     {
         //
     }
+
+    public function result()
+    {
+        return view('ast.mast-results');
+    }
+
+    public function examroom()
+    {
+        return view('ast.examroom');
+    }
+
+    public function examrooms()
+    {
+        return view('ast.examroom');
+    }
 }

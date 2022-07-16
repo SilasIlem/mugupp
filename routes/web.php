@@ -2,7 +2,9 @@
 
 use App\Events\MessageNotification;
 use App\Http\Controllers\AstController;
+use App\Http\Controllers\CbtController;
 use App\Http\Controllers\CreatorController;
+use App\Http\Controllers\HallController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PayController;
 use App\Http\Controllers\StoryController;
@@ -141,10 +143,6 @@ Route::middleware(['auth'])->group(
         Route::get('/events', function () {
             return view('events');
         })->name('events');
-
-        Route::get('/thehall', function () {
-            return view('hall');
-        })->name('hall');
 
         Route::get('/videos/upload', function () {
             return view('videos.video_upload');
@@ -290,19 +288,36 @@ Route::middleware(['auth'])->group(
 
         Route::get('/apply', [AstController::class, 'apply'])->name('apply');
 
+        Route::get('/lecture', [AstController::class, 'lecture'])->name('lecture');
+
         Route::get('/payment', [PayController::class, 'index'])->name('paypage');
 
-        Route::get('exam-results', [AstController::class, 'exam'])->name('exam');
+        Route::get('exam-results', [AstController::class, 'result'])->name('results');
 
-        Route::get('/cbt', [QuestController::class, 'index'])->name('begin');
+        Route::get('/examroom', [AstController::class, 'examroom'])->name('examroom');
+
+        Route::get('/examrooms', [AstController::class, 'examrooms'])->name('examrooms');
+
+        Route::get('examboard', [AstController::class, 'examboard'])->name('examboard');
+
+        Route::get('/cbt', [CbtController::class, 'index'])->name('begin');
 
         Route::get('/syllabus', function () {
             return view('ast.syllabus');
         })->name('syllabus');
 
-        Route::get('/scoreboard', function () {
-            return view('performance');
+        Route::get('/performancetable', function () {
+            return view('ast.performance');
         })->name('performance');
+
+        //Hall        
+        Route::get('/thehall', [HallController::class, 'index'])->name('hall');
+
+        Route::get('/createworkspace', [HallController::class, 'create'])->name('create-workspace');
+
+        Route::get('/workspace/{space}', [HallController::class, 'workspace'])->name('workspace');
+
+        Route::get('/workspaces', [HallController::class, 'workspaces'])->name('workspaces');
     }
 );
 

@@ -32,15 +32,46 @@
             background : rgba(255, 255, 255, 0.205);
             pointer-events : none
         }
+                
+        input[type="text"],
+        select {
+            width: 100%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="password"],
+        select {
+            width: 100%;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            box-shadow: 0px 0px 4px #555;
+            outline: none;
+        }
+
+        @media screen and (max-width : 600px) {
+            
+            #m-name {
+                font-size : 4rem;
+                letter-spacing : 3px;
+                margin-top : 46vh;
+            }
+        }
     </style>
 </head>
 <body>
 
     <div id="register">
-        <a href="{{ route('ast') }}"><button><i class = "bi bi-arrow-back"></i></button></a>
+        <a href="{{ route('mast') }}"><button><i class = "bi bi-arrow-back"></i></button></a>
         <div class="font-sans text-gray-900 antialiased">
 
-                <link rel="stylesheet" href="{{asset('css/register.css')}}">
                 
                 <h1 id = 'm-name'>
                     mast

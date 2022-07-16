@@ -90,7 +90,11 @@
                 padding-top : 88px;
                 top : 0px;
                 width : 280px;
-                background : var(--color-primary-main);
+                background : url("{{ asset('images/margarita-zueva-vfcTND7lWLU-unsplash - Copy.jpg') }}"), var(--color-primary-main);
+                background-size : cover;
+                background-repeat: no-repeat;
+                background-position : left center;
+                background-blend-mode:multiply;
                 display : flex;
                 color : var(--color-white);
                 flex-direction : column;
@@ -117,7 +121,6 @@
                 right : 4px;
                 top : 8px;
                 border-radius : 50%;
-                background : var(--color-primary-main);
                 height : 40px;
                 width : 50px;
                 padding : 8px 14px;
