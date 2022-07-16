@@ -529,7 +529,7 @@
                         </div>
                         @else
                         <div id="exam-result-gpa">
-                            <h3 class="div-header"><span>Exam Results</span><a href="{{ route('exam') }}"><i class="bi bi-arrow-right"></i></a></h3>
+                            <h3 class="div-header"><span>Exam Results</span><a href="{{ route('results') }}"><i class="bi bi-arrow-right"></i></a></h3>
 
                             <div>
                                 <h5>74.6%</h5>
