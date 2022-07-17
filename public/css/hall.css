@@ -53,6 +53,7 @@ nav {
     height : 3rem;
     width : 100vw;
     background : url(../images/booksimages/banner-bg.jpg);
+    background : var(--color-white);
     display : flex;
     position : fixed;
     gap : 1.2rem;
@@ -126,7 +127,7 @@ nav img {
     border-radius : 40%;
 }
 
-nav #burger {
+nav #nav-burger {
     display : none;
     font-size : 1.1rem;
     color: var(--color-primary-main);
@@ -141,6 +142,7 @@ main {
 #side-links {
     position : fixed;
     background : url(../images/booksimages/banner-bg.jpg);
+    background : var(--color-white);
     top : 3rem;
     width : 320px;
     padding-top : 3rem;
@@ -202,6 +204,7 @@ main {
     width : 18px;
     background : url(../images/booksimages/banner-bg.jpg);
     height : calc(100vh - 3rem);
+    background : var(--color-white);
 }
 
 #before.shrink {
@@ -225,6 +228,7 @@ main {
     margin : calc(3rem + 20px) 20px 20px 340px;
     width : calc(100vw - 360px);
     background : url('../images/booksimages/banner-bg.jpg');
+    background : var(--color-white);
     border-radius : 12px;
     overflow : hidden;
     min-height : 90vh;
@@ -303,7 +307,7 @@ main {
         transform : translateX(0%);
     }
 
-    nav #burger {
+    nav #nav-burger {
         display : block;
         padding-top : 4px;
         z-index : 999;
@@ -336,8 +340,7 @@ main {
     }
 
     #content-before, #content.shrink + #content-before {
-        width : 100vw;
-        left : 0px;
+        display : none;
     }
 }
 

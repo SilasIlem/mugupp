@@ -47,7 +47,7 @@ section > h2 {
 }
 
 #welcome h2 {
-    font-size : 1.7rem;
+    font-size : .9rem;
     color : var(--color-primary-main);
     margin-bottom : 40px;
 }
@@ -59,8 +59,9 @@ section > h2 {
 
 #welcome h3  b {
     font-weight : 600;
-    letter-spacing : 12px;
-    font-size : 3.4rem;
+    letter-spacing : 5px;
+    font-size : 2.6rem;
+    margin-left : 1.05rem;
     color : var(--color-orange);
 }
 
@@ -321,6 +322,13 @@ section > h2 {
     width : 100%;
     background : var(--color-white);
     padding-right : .8rem;
+}
+
+#notice-board > p {
+    margin : 2rem;
+    font-size : 1.02rem;
+    font-weight : 200;
+    color : var(--color-gray);
 }
 
 #notice-board > div {
@@ -688,10 +696,17 @@ section > h2 {
 @media screen and (max-width : 1464px) {
     #container {
         display : block;
-        padding-right : 1.6rem;
+        padding : 10px;
+    }
+
+    #container section {
+        margin : 0px;
+        padding-left : 0px;
     }
 
     #welcome {
+        padding : 0px;
+        margin : 0px;
         display : flex;
         flex-direction: column;
     }
@@ -730,6 +745,20 @@ section > h2 {
     }
 }
 
+@media screen and (max-width : 564px) {
+    :root {
+        font-size : 13.2px;
+    }
+
+    .oner {
+        width : 100%;
+        padding : 1rem;
+    }
+
+    #events {
+        width : 100vw;
+    }
+}
 .phpdebugbar {
     display : none;
 }

@@ -16,7 +16,7 @@
         <div id="progress"></div>
     </div>
     <nav>
-        <i id = "burger" class = "bi bi-list-ul"></i>
+        <i id = "side-burger" class = "bi bi-list-ul"></i>
         <h1>Mugupp</h1>
         <ul id = "navlinks">
             <a href="{{ route('hall') }}">
@@ -83,7 +83,7 @@
                 </li>
             </a>
         </ul>
-        <button id = "burger" onclick = "document.getElementById('navlinks').classList.toggle('show');">
+        <button id = "nav-burger" onclick = "document.getElementById('navlinks').classList.toggle('show');">
             <i class="bi bi-list"></i>
         </button>
     </nav>
@@ -201,7 +201,7 @@
         content = document.getElementById('content');
         before = document.getElementById('before');
 
-        document.querySelector('#burger').addEventListener('click', () => {
+        document.querySelector('#side-burger').addEventListener('click', () => {
             sideBar.classList.toggle('shrink');
             content.classList.toggle('shrink');
             before.classList.toggle('shrink');

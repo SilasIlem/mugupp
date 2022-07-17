@@ -98,7 +98,7 @@
                 display : flex;
                 color : var(--color-white);
                 flex-direction : column;
-                box-shadow : inset 0px 0px 6px var(--color-dark);
+                box-shadow : inset 0px 0px 8px black, inset 0px 0px 10px var(--color-purple);
                 height : 100vh;
                 padding-bottom : 80px;
                 transition : .1s;
