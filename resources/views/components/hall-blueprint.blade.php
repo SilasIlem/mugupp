@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Videos</title>
+    <title>The Hall</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap-icons/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('css/DocReset.css') }}">
     <link rel="stylesheet" href="{{ asset('css/hall.css') }}">
+    @yield('styles')
 </head>
 <body>
     <div id="preloader">
@@ -17,10 +18,16 @@
     <nav>
         <i id = "burger" class = "bi bi-list-ul"></i>
         <h1>Mugupp</h1>
-        <ul>
+        <ul id = "navlinks">
             <a href="{{ route('hall') }}">
                 <li>
                     Hall
+                </li>
+            </a>
+
+            <a href="{{ route('courses') }}">
+                <li>
+                    Courses
                 </li>
             </a>
 
@@ -50,14 +57,14 @@
         </ul>
 
         <label for = "media-search-input">
-            <i class = "bi bi-search"></i>
+            <i class = "bi bi-search" onclick = "document.getElementById('media-search-input').classList.toggle('show');"></i>
             <input type="search" name="" id="media-search-input" placeholder = "Search for Artisans, Workspaces, keywords...">
         </label>
 
         <ul>
             <a href="{{ route('study') }}">
                 <li>
-                    <i class = "bi bi-command"></i>
+                    <i class = "bi bi-journal-text"></i>
                 </li>
             </a>
             <a href = "{{ route('academe') }}">
@@ -76,11 +83,14 @@
                 </li>
             </a>
         </ul>
+        <button id = "burger" onclick = "document.getElementById('navlinks').classList.toggle('show');">
+            <i class="bi bi-list"></i>
+        </button>
     </nav>
 
     <main>
             
-        <div id="side-links">
+        <div id="side-links" class = "shrink">
 
             <ul id = "category-tags">
                 <a href="">
@@ -176,9 +186,9 @@
             </ul>
             
         </div>
-        <div id = "before"></div>
+        <div id = "before" class = "shrink"></div>
 
-        <div id="content">
+        <div id="content" class = "shrink">
             {{$slot}}
         </div>
 

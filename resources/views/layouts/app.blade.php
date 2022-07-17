@@ -98,6 +98,7 @@
                 display : flex;
                 color : var(--color-white);
                 flex-direction : column;
+                box-shadow : inset 0px 0px 6px var(--color-dark);
                 height : 100vh;
                 padding-bottom : 80px;
                 transition : .1s;
@@ -742,7 +743,7 @@
                 <a href="{{ route('study') }}" onclick = "{{ Route::current()->getName() == 'study' ? 'javascript:void(0);' : '' }}">
                     <li class = "{{ Route::current()->getName() == 'study' ? 'active' : ''}}">
                         <span>
-                            <i class = "bi bi-command"></i>
+                            <i class = "bi bi-journal-text"></i>
                         </span>
                         <h4>Study</h4>
                     

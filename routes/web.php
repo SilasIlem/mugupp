@@ -20,6 +20,7 @@ use App\Models\Follower;
 use App\Models\Impression;
 use App\Models\MuguppNotification;
 use App\Models\Notification;
+use App\Models\Part;
 use App\Models\SavedPost;
 use App\Models\Thread;
 use App\Models\Todo;
@@ -78,9 +79,6 @@ Route::middleware(['auth'])->group(
 
         Route::get('/creator', [CreatorController::class, 'index'])->name('create-book');
 
-        Route::get('library', function () {
-            return view('books.library', ['books' => Book::all()]);
-        })->name('library');
 
         Route::get('/chat', function () {
             return view('chat');
@@ -89,25 +87,6 @@ Route::middleware(['auth'])->group(
         Route::get('/contacts', function () {
             return view('contacts');
         })->name('contacts');
-
-        Route::get('/books', function () {
-            return view('books.books');
-        })->name('books');
-
-        Route::get('/view-book/{slug}', function ($slug) {
-            return view('books.book-view', ['book' => Book::where('slug', '=', $slug)->with(['parts'])->firstorFail()]);
-        })->name('view-book');
-
-        Route::get('/read/{book_slug}/{slug?}', function ($book_slug, $slug) {
-            if ($slug != null) {
-                return view('books.read-book', [
-                    'slug' => $slug,
-                    'book' => Book::where('slug', '=', $book_slug)->firstorFail()
-                ]);
-            } else {
-                return view('book.read-book', ['book' => Book::where('slug', '=', $book_slug)->firstorFail()]);
-            }
-        })->name('read-book');
 
         Route::get('/booths', function () {
             return view('booths');
@@ -284,8 +263,8 @@ Route::middleware(['auth'])->group(
                 return 'not-saved';
             }
         });
-        //AST
 
+        //AST
         Route::get('/apply', [AstController::class, 'apply'])->name('apply');
 
         Route::get('/lecture', [AstController::class, 'lecture'])->name('lecture');
@@ -310,8 +289,38 @@ Route::middleware(['auth'])->group(
             return view('ast.performance');
         })->name('performance');
 
+        //Library
+        Route::get('library', function () {
+            return view('books.library', ['books' => Book::all()]);
+        })->name('library');
+
+        Route::get('/books', function () {
+            return view('books.books');
+        })->name('books');
+
+        Route::get('/view-book/{slug}', function ($slug) {
+            return view('books.book-view', ['book' => Book::where('slug', '=', $slug)->with(['parts'])->firstorFail()]);
+        })->name('view-book');
+
+        Route::get('/read/{book_slug}/{slug?}', function ($book_slug, $slug) {
+            if ($slug != null) {
+                return view('books.read-book', [
+                    'slug' => $slug,
+                    'book' => Book::where('slug', '=', $book_slug)->firstorFail(),
+                    'part' => Book::where('slug', '=', $book_slug)->first()->parts()->first()
+                ]);
+            } else {
+                return view('book.read-book', ['book' => Book::where('slug', '=', $book_slug)->firstorFail(), 'part' => Part::where('slug', '=', $slug)->first()]);
+            }
+        })->name('read-book');
+
+
         //Hall        
         Route::get('/thehall', [HallController::class, 'index'])->name('hall');
+
+        Route::get('/course/{slug}', [HallController::class, 'course'])->name('course');
+
+        Route::get('/courses', [HallController::class, 'courses'])->name('courses');
 
         Route::get('/createworkspace', [HallController::class, 'create'])->name('create-workspace');
 

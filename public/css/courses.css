@@ -1,0 +1,136 @@
+#container {
+    padding : 1rem;
+}
+
+#container #intro {
+    display : flex;
+    flex-direction : column;
+    gap : 1.5rem;
+    align-items : center;
+    padding : 0px 25vw;
+    margin-bottom : 80px;
+}
+
+#intro h1 {
+    font-size : 1.8rem;
+    color : var(--color-primary-main);
+    margin : 1rem;
+}
+
+#intro p {
+    line-height : 24px;
+    text-align : center;
+    font-size : 1.1rem;
+}
+
+#courses ul {
+    display : grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap : 1.3rem;
+}
+
+.course > div {
+    width : 80%;
+    height : max-content;
+    display : flex;
+    flex-direction : column;
+    padding : .8rem;
+    padding-top : 30px;
+    gap : 1.2rem;
+    background : var(--color-white);
+    position : relative;
+    border-radius : 6px;
+    box-shadow : 0px 0px 4px 1px var(--color-dark);
+}
+
+.course .price-tag {
+    position : absolute;
+    top : 8px;
+    right : 8px;
+    padding : 4px 8px;
+    font-size : .9rem;
+    background : var(--color-dark);
+    color : white;
+}
+
+.course h2 {
+    font-size : 1.2rem;
+    margin : 1rem;
+    margin-bottom : 0px;
+}
+
+.course .time-desc {
+    display : flex;
+    justify-content : space-between;
+    width : 100%;
+    margin-bottom : 1rem;
+}
+
+.course h4 {
+    font-weight : 300;
+    font-size : 1.1rem;
+}
+
+.course .artisan {
+    width : 100%;
+    display : flex;
+    font-size : 1.2rem;
+    align-items : center;
+    gap : .8rem;
+}
+
+.course .artisan img {
+    width: 48px;
+    height : 48px;
+    border-radius : 38%;
+}
+
+.course-bottom {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : space-between;
+    gap : .8rem;
+}
+
+.course-link {
+    display : flex;
+    justify-content : center;
+    flex-grow : 1;
+}
+
+.course button {
+    width : 120px;
+    height : 38px;
+    background : var(--color-dark);
+    color : var(--color-white);
+    text-transform: uppercase;
+}
+
+@media screen and (max-width : 1200px) {
+    #courses > ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width : 1064px) {
+    #courses > ul {
+        grid-template-columns : repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width : 764px) {
+    #container > #intro {
+        padding : 1rem;
+    }
+    #courses > ul {
+        display : flex;
+        flex-wrap : wrap;
+        justify-content : space-around;
+        align-items : center;
+        gap : 1.2rem;
+    }
+
+    .course > div {
+        width : 320px;
+    }
+}

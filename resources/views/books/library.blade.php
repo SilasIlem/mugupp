@@ -1,56 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{{ asset('css/DocReset.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap-icons/bootstrap-icons.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/library.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<x-library-blueprint>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-</head>
-<body>
-    <nav>
-
-        <h1>Mugupp</h1>
-
-        <ul>
-            <li>FEATURES</li>
-            <li>BLOG</li>
-            <li>GALLERY</li>
-            <li>SHOP</li>
-        </ul>
-
-        <div id="tray">
-            
-            <ul>
-                <i class="bi bi-search"></i>
-                <form action="">
-                    <input type="text" name="search" id="search" placeholder = "search...">
-                </form>
-            </ul>
-
-            <a href="{{ route('study') }}">
-                <i class = "bi bi-command"></i>
-            </a>
-
-            <a href="{{ route('academe') }}">
-                <i class = "bi bi-globe"></i>
-            </a>
-            <div>
-                <a href="{{ route('create-book') }}"><button>Create</button></a>    
-                <a href="{{ route('study') }}"><button>Study</button></a>
-            </div>
-            <img src="{{ asset('storage/prof-pics/' . Auth::user()->user_pic) }}" alt="">
-        </div>
-
-    </nav>
- 
     <div id="container">
-
+        
         
         <div id="welcome">
             <div>
@@ -308,7 +259,7 @@
         </div>
 
     </div>
-
+    @section('scripts')
     <script>
 
         const swiper = new Swiper('.swiper', {
@@ -367,5 +318,5 @@
             // },
         })
     </script>
-</body>
-</html>
+    @endsection
+</x-library-blueprint>
