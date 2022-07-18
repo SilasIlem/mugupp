@@ -1,0 +1,103 @@
+#preloader {
+    display : none;
+}
+
+#container {
+    position : relative;
+}
+
+#course-top {
+    min-height : 300px;
+    position : relative;
+    background : var(--color-dark);
+    color : var(--color-white);
+    padding : 2rem;
+}
+
+#course-top h1 {
+    font-size : 1.8rem;
+    margin : 1rem;
+    font-weight : 300;
+}
+
+#course-top h2 {
+    font-size : 1.2rem;
+    margin : .4rem 2rem;
+    font-weight : 300;
+}
+
+#stats {
+    display : flex;
+    gap : 1.2rem;
+    flex-direction : column;
+    flex-wrap : wrap;
+    margin-top : 1.2rem;
+}
+
+#rating-tag {
+    padding : .4rem .8rem;
+    background : var(--color-orange);
+    color : var(--color-white);
+    font-weight : 200;
+    position : absolute;
+    top : 1rem;
+    right : 1rem;
+}
+
+#rating {
+    padding : .3rem 1.2rem;
+    display : flex;
+    gap : .8rem;
+}
+
+#creator {
+    padding : .3rem 1.2rem;
+}
+
+#time {
+    display : flex;
+    gap : 1rem;
+    align-items : center;
+    padding : 1.2rem 1rem;
+}
+
+#course-desc {
+    padding : 1rem;
+    width : 800px;
+    margin-left : 1.2rem;
+}
+
+#course-desc > h1 {
+    font-size : 1.4rem;
+    font-weight : 300;
+    text-transform : uppercase;
+    color : var(--color-lemon);
+    margin : 30px 0px;
+}
+
+#what-to-learn {
+    display : grid;
+    grid-template-columns : 300px 300px;
+    gap : 1.6rem;
+    margin : 1rem;
+    margin-bottom : 3rem;
+    margin-left : 3rem;
+}
+
+#what-to-learn li {
+    list-style : circle;
+}
+
+#prerequisites {
+    max-height : 400px;
+}
+
+#prerequisites > h1 {
+    font-size : 1.4rem;
+}
+
+#prerequisites ul {
+    display : flex;
+    flex-direction : column;
+    gap : 1rem;
+}

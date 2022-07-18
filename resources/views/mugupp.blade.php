@@ -80,7 +80,6 @@
                                 <form id = login method="POST" action="{{ route('login') }}">
                                     @csrf
                         
-                                    <h1>Log in to Mugupp</h1>
                                     <!-- Email Address -->
                                     <div>
                                         <x-input id="email" class="block mt-1 w-full" placeholder="email" type="email" name="email" :value="old('email')" required autofocus />

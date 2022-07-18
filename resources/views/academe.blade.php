@@ -48,7 +48,7 @@
                     </div>
                     
                     <ul>
-                        <li><a href="{{ route('study') }}"><i class="bi bi-command"></i></a></li>
+                        <li><a href="{{ route('study') }}"><i class="bi bi-journal-text"></i></a></li>
                         <li><a href="{{ route('questions') }}"><i class = "bi bi-question-octagon"></i></a></li>
                         <li title = "The Hall"><a href="{{ route('hall') }}"><i class = "bi bi-shop"></i></a></li>
                     </ul>

@@ -138,6 +138,7 @@ section h1 {
 
 
 .loading {
+    --running-width : 200px;
     background-color: var(--color-primary-main);
     display: inline-block;
     margin : 0px 3px;
@@ -155,7 +156,7 @@ section h1 {
     40% {
         transform: scale(1);
         opacity: 0.5;
-        min-width : 200px;
+        min-width : var(--running-width);
     }
 }
 
@@ -1637,12 +1638,6 @@ footer h2 {
         padding : 0px;
     }
 
-    .card.login {
-        min-width : 86vw;
-        max-width : 86vw;
-        margin : auto;
-    }
-
     #landing {
         padding : 0px;
         padding-top : 20px;
@@ -1657,17 +1652,24 @@ footer h2 {
 
 
 @media screen and (max-width : 600px) {
+    .loading {
+        --running-width : 20vw;
+    }
     
     #landing {
-        padding-top : 120px;
+        padding-top : 30px;
     }
 
     nav#nav {
         padding-top : 30px;
     }
 
-    #m-name img {
-        width : 100px;
+    #m-name {
+        font-size : 1.4rem;
+        padding : 1rem;
+        font-weight : 700;
+        padding-top : 10px;
+        text-align : center;
         height : 50px;
     }
 
@@ -1681,8 +1683,13 @@ footer h2 {
 
     .card.login {
         padding : 30px;
+        height : 460px;
+        margin : auto;
+        max-width : 350px;
+    }
+
+    .login #sign {
         margin : 0px;
-        max-width : 96vw;
     }
 
     #top > div, #about > div > div {

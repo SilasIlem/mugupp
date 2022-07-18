@@ -169,6 +169,7 @@
     border-top-left-radius : 8px;
     display: flex;
     gap: 1.5rem;
+    position : relative;
     padding-bottom: 50px;
     flex-direction: column;
     color : var(--color-gray);
@@ -1348,6 +1349,10 @@ div#side-links > li {
 
     #share img {
         display: block;
+        height : 42px;
+        width : 46px;
+        border-radius : 30%;
+        box-shadow : 0px 0px 3px var(--color-dark);
     }
 
     #misc {
@@ -1369,6 +1374,12 @@ div#side-links > li {
         min-width: 97%;
         max-width: 97%;
         margin-left: 1%;
+    }
+
+    .post-comment-container {
+        margin-right : 0px;
+        padding-right : 0px;
+        width : calc(100% - 2rem);
     }
 }
 
@@ -1408,7 +1419,7 @@ div#side-links > li {
     #app {
         padding : 0px;
         box-shadow : none;
-        width : 100%;
+        width : 100vw;
     }
 
     #academe-sidebar {
