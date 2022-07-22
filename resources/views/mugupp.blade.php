@@ -69,7 +69,7 @@
 
                             
 
-                            <div class="login card mt-2 px-2 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+                            <div class="login card mt-2 px-2 py-4 overflow-hidden sm:rounded-lg">
                                 
                                 <!-- Session Status -->
                                 <x-auth-session-status class="mb-4" :status="session('status')" />

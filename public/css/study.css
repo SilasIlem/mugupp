@@ -1005,6 +1005,10 @@ section > h1 {
     #events {
         width : 100vw;
     }
+
+    #contacts > div {
+        padding : 12px 0px;
+    }
 }
 .phpdebugbar {
     display : none;

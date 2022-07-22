@@ -347,6 +347,7 @@ section h1 {
 .login {
     width : 340px;
     padding : 28px;
+    background : var(--color-white);
     box-shadow : 0px 0px 8px black;
 }
 
@@ -1708,6 +1709,10 @@ footer h2 {
 }
 
 @media screen and (max-width : 600px) {
+    :root, body {
+        font-size : 14.6px;
+    }
+
     .loading {
         --running-width : 20vw;
     }
@@ -1721,12 +1726,12 @@ footer h2 {
     }
 
     #m-name {
-        font-size : 1.4rem;
+        background : none;
+        font-size : 1.8rem;
         padding : 1rem;
-        font-weight : 700;
+        font-weight : 400;
         padding-top : 10px;
         text-align : center;
-        height : 50px;
     }
 
     div#register {
@@ -1737,11 +1742,22 @@ footer h2 {
         left : 2vw;
     }
 
+    #landing {
+        background : var(--color-light);
+    }
+
+    #landing::before {
+        display : none;
+    }
+
     .card.login {
+        border : none;
         padding : 30px;
         height : 460px;
         margin : auto;
         max-width : 346px;
+        background : transparent;
+        box-shadow : none;
     }
 
     .login #sign {
