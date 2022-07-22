@@ -158,6 +158,10 @@ main {
     width : 4px;
 }
 
+#side-links::-webkit-scrollbar-corner {
+    display : none;
+}
+
 #category-tags {
     display : flex;
     gap : 1rem;

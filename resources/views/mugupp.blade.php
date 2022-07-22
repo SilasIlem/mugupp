@@ -44,7 +44,7 @@
                 <h1>Mugupp</h1>
                 <div>
                     <div style = "animation-delay : -0.32s" class = "loading"></div>
-                    <div class = "loading"></div>
+                    <div class = "loading" style = "--running-width : 100%"></div>
                     <div style = "animation-delay : -0.24s" class = "loading"></div>
                 </div>
             </div>

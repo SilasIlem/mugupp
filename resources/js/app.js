@@ -38,10 +38,4 @@ Vue.component('post-component', require('./components/postComponent.vue').defaul
 
 const app = new Vue({
     el: '#app',
-    created() {
-        Echo.channel('notification')
-            .listen('MessageNotification', (e) => {
-                alert("It's Alive");
-            })
-    }
 });

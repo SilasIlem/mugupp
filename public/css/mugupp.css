@@ -138,7 +138,7 @@ section h1 {
 
 
 .loading {
-    --running-width : 200px;
+    --running-width : 80px;
     background-color: var(--color-primary-main);
     display: inline-block;
     margin : 0px 3px;

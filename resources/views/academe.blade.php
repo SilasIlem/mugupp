@@ -141,189 +141,203 @@
                     
                 <div id = "container">
 
-                        <div id="academe-sidebar">
+                    <div id="academe-sidebar">
 
-                            <h1>Mugupp</h1>
-                            <div id = "side-links" class = "accordion">
-        
-                                <ul>
-                                    <li>
-                                        <a href="{{ route('study') }}">
-                                            <span>
-                                                <i class = "bi bi-columns-gap"></i>
-                                            </span>
-                                            <h4>My Study</h4>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="{{ route('explorer') }}">
-                                            <span>
-                                                <i class = "bi bi-folder"></i>
-                                            </span>
-                                            <h4>Explore</h4>
-                                        </a>
-                                    </li>
+                        <h1>Mugupp</h1>
+                        <div id = "side-links" class = "accordion">
     
-                                    <li>
-                                        <a href="">
-                                            <span>
-                                                <i class = "bi bi-bookmark"></i>
-                                            </span>
-                                            <h4>Bookmarks</h4>
-                                        </a>
-                                    </li>
-    
-                                    <li>
-                                        <a href="">
-                                            <span>
-                                                <i class = "bi bi-people"></i>
-                                            </span>
-                                            <h4>Contacts</h4>
-                                        </a>
-                                    </li>
-                                  
-                                    <li>
-                                        <a href="{{ route('profile') }}">
-                                            <span>
-                                                <i class = "bi bi-person"></i>
-                                            </span>
-                                            <h4>Profile</h4>
-                                        </a>
-                                    </li>
+                            <ul>
+                                <li>
+                                    <a href="{{ route('study') }}">
+                                        <span>
+                                            <i class = "bi bi-columns-gap"></i>
+                                        </span>
+                                        <h4>My Study</h4>
+                                    </a>
+                                </li>
 
-                                    <li>
-                                        <a href="{{ route('settings') }}">
-                                            <span><i class = "bi bi-gear"></i></span>
-                                            <h4>Settings</h4>
-                                        </a>
-                                    </li>
+                                <li>
+                                    <a href="{{ route('explorer') }}">
+                                        <span>
+                                            <i class = "bi bi-folder"></i>
+                                        </span>
+                                        <h4>Explore</h4>
+                                    </a>
+                                </li>
 
-                                    <li class="extra">
-                                        <a href="">
-                                            <h4>Booths</h4>
-                                        </a>
-                                    </li>
-                                    <li class="extra">
-                                        <a href="">
-                                            <h4>Mailbox</h4>
-                                        </a>
-                                    </li>
-                                    <li class="extra">
-                                        <a href="">
-                                            <h4>Notifications</h4>
-                                        </a>
-                                    </li>
-                                    <li class="extra">
-                                        <a href="">
-                                            <h4>Topics</h4>
-                                        </a>
-                                    </li>
+                                <li>
+                                    <a href="">
+                                        <span>
+                                            <i class = "bi bi-bookmark"></i>
+                                        </span>
+                                        <h4>Bookmarks</h4>
+                                    </a>
+                                </li>
 
-                                </ul>
-
-                                <div id = "more-section">
-                                    <button id = "more-btn">
-                                        <span><i class = "bi bi-three-dots"></i></span>
-                                        <h4 class = "more">More</h4>
-                                        <h4 class="less">Less</h4>
-                                    </button>  
-                                </div>
+                                <li>
+                                    <a href="">
+                                        <span>
+                                            <i class = "bi bi-people"></i>
+                                        </span>
+                                        <h4>Contacts</h4>
+                                    </a>
+                                </li>
                                 
-                            </div>
-                            
-                            {{-- <div>
-                                <h2>shortcuts</h2>
-                            </div> --}}
-                            
-                            <div id = "recents"  class = "accordion">
-                                <h2>Recent Activities</h2>
-                                <ul>
-                                    <li>
-                                        <span>20 minutes ago</span>
-                                        <p>Commented on Video</p>
-                                        <small>By <b>John Snow</b></small>
-                                    </li>
-                                    
-                                    <li>
-                                        <span>20 minutes ago</span>
-                                        <p>Commented on Video</p>
-                                        <small>By <b>John Snow</b></small>
-                                    </li>
-                                    
-                                    <li>
-                                        <span>20 minutes ago</span>
-                                        <p>Commented on Video</p>
-                                        <small>By <b>John Snow</b></small>
-                                    </li>
-                                </ul>
+                                <li>
+                                    <a href="{{ route('profile') }}">
+                                        <span>
+                                            <i class = "bi bi-person"></i>
+                                        </span>
+                                        <h4>Profile</h4>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{ route('settings') }}">
+                                        <span><i class = "bi bi-gear"></i></span>
+                                        <h4>Settings</h4>
+                                    </a>
+                                </li>
+
+                                <li class="extra">
+                                    <a href="">
+                                        <h4>Booths</h4>
+                                    </a>
+                                </li>
+                                <li class="extra">
+                                    <a href="">
+                                        <h4>Mailbox</h4>
+                                    </a>
+                                </li>
+                                <li class="extra">
+                                    <a href="">
+                                        <h4>Notifications</h4>
+                                    </a>
+                                </li>
+                                <li class="extra">
+                                    <a href="">
+                                        <h4>Topics</h4>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <div id = "more-section">
+                                <button id = "more-btn">
+                                    <span><i class = "bi bi-three-dots"></i></span>
+                                    <h4 class = "more">More</h4>
+                                    <h4 class="less">Less</h4>
+                                </button>  
                             </div>
                             
                         </div>
-
                         
-                        <div id="app">
-
-                            <div id = "my_mind">
-
-                                <div id="share" class = "tabcontent">
-                                    <div>
-                                        <a href="{{ route('profile') }}"><img src = "{{ asset('storage/prof-pics/' . Auth::user()->user_pic) }}" /></a>
-                                        <button onclick = "postable();">What's on your mind?</button>
-                                        <i class = "bi bi-image-alt"></i>
-                                    </div>
-                                </div>
-
-                                <div id="upload" class="tabcontent">
-                                    uploader
-                                </div>
-
-                                <div id="article" class="tabcontent">
-                                    article
-                                </div>
-
-                                <div id="question" class="tabcontent">
-                                    question
-                                </div>
+                        {{-- <div>
+                            <h2>shortcuts</h2>
+                        </div> --}}
+                        
+                        <div id = "recents"  class = "accordion">
+                            <h2>Recent Activities</h2>
+                            <ul>
+                                <li>
+                                    <span>20 minutes ago</span>
+                                    <p>Commented on Video</p>
+                                    <small>By <b>John Snow</b></small>
+                                </li>
                                 
-                                <div id="create-story" class="tabcontent">
-                                    <form action="/story" method = "POST" enctype = "multipart/form-data">
-                                        @csrf
-                                        <input type="file" name = "story_img" />
-                                        <button type="submit">Submit</button>
-                                    </form>
-                                </div>
+                                <li>
+                                    <span>20 minutes ago</span>
+                                    <p>Commented on Video</p>
+                                    <small>By <b>John Snow</b></small>
+                                </li>
+                                
+                                <li>
+                                    <span>20 minutes ago</span>
+                                    <p>Commented on Video</p>
+                                    <small>By <b>John Snow</b></small>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
 
-                                <div class = "tab">
-                                    <button id = "defaultOpen" class = "tablinks" onclick = "openTab(event, 'share')">
-                                        <i class = "bi bi-pencil-square"></i>
-                                        <span>post</span>
-                                    </button>
-                                    <button class = "tablinks" onclick = "openTab(event, 'upload')">
-                                        <i class = "bi bi-images"></i>
-                                        <span>
-                                            Photo(s)
-                                        </span>
-                                    </button>
-                                    <button class = "tablinks" onclick = "openTab(event, 'article')">
-                                        <i class = "bi bi-card-text"></i>
-                                        <span>Article</span>
-                                    </button>
-                                    <button class = "tablinks" onclick = "openTab(event, 'question')">
-                                        <i class = "bi bi-question-octagon"></i>
-                                        <span>Question</span>
-                                    </button>
                     
-                                </div>
+                    <div id="app">
 
+                        <div id = "my_mind">
+
+                            <div id="share" class = "tabcontent">
+                                <div>
+                                    <a href="{{ route('profile') }}"><img src = "{{ asset('storage/prof-pics/' . Auth::user()->user_pic) }}" /></a>
+                                    <button onclick = "postable();">What's on your mind?</button>
+                                    <i class = "bi bi-image-alt"></i>
+                                </div>
                             </div>
 
-                            <h1 id = "learn-sign">Learn At The Academe</h1>
+                            <div id="upload" class="tabcontent">
+                                uploader
+                            </div>
 
-                            <div id="posts">
-                                <img id = "post-shall-load" src="{{ asset('images/9.gif') }}" alt="">
-{{--                                 
-                                <div class = "post">
+                            <div id="article" class="tabcontent">
+                                article
+                            </div>
+
+                            <div id="question" class="tabcontent">
+                                question
+                            </div>
+                            
+                            <div id="create-story" class="tabcontent">
+                                <form action="/story" method = "POST" enctype = "multipart/form-data">
+                                    @csrf
+                                    <input type="file" name = "story_img" />
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+
+                            <div class = "tab">
+                                <button id = "defaultOpen" class = "tablinks" onclick = "openTab(event, 'share')">
+                                    <i class = "bi bi-pencil-square"></i>
+                                    <span>post</span>
+                                </button>
+                                <button class = "tablinks" onclick = "openTab(event, 'upload')">
+                                    <i class = "bi bi-images"></i>
+                                    <span>
+                                        Photo(s)
+                                    </span>
+                                </button>
+                                <button class = "tablinks" onclick = "openTab(event, 'article')">
+                                    <i class = "bi bi-card-text"></i>
+                                    <span>Article</span>
+                                </button>
+                                <button class = "tablinks" onclick = "openTab(event, 'question')">
+                                    <i class = "bi bi-question-octagon"></i>
+                                    <span>Question</span>
+                                </button>
+                
+                            </div>
+
+                        </div>
+
+                        <h1 id = "learn-sign">Learn At The Academe</h1>
+
+                        <div id="posts">
+                            <img id = "post-shall-load" src="{{ asset('images/9.gif') }}" alt="">
+
+                            <div id="trendings-today">
+                                <div class="trending-today">
+                                    
+                                </div>
+                                <div class="trending-today">
+
+                                </div>
+                                <div class="trending-today">
+
+                                </div>
+                                <div class="trending-today">
+
+                                </div>
+                            </div>
+                            {{--<div class = "post">
                                     <div class="post-head">
                                         <div class = "head-0">
                                             <i class = "bi bi-chat-left-quote-fill"></i>
@@ -403,152 +417,152 @@
                                 
                                 <hr> --}}
 
-                            </div>
+                        </div>
                             
+                    </div>
+
+                    <div id="misc">
+                        <div>
+                        <div id="workspaces">
+                            <h2>Your workspaces</h2>
+                            <div>
+                                <div id = "workspace_details">
+                                    <div>
+                                        <p><span>Workspaces</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div id="create-workspace">
+                                    <img src="{{ asset('images/Mugupp ordinary.png') }}" alt="">
+                                    <h4>CREATE YOUR OWN MUGUPP workspace AT THE ACADEME</h4>
+                                    <a href="/create-workspace"><button>Start Now</button></a>
+                                </div>
+                            </div>
                         </div>
 
-                        <div id="misc">
+                        <div id="books">
+                            <h2>Your Books</h2>
                             <div>
-                            <div id="workspaces">
-                                <h2>Your workspaces</h2>
-                                <div>
-                                    <div id = "workspace_details">
-                                        <div>
-                                            <p><span>Workspaces</span></p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div id="create-workspace">
-                                        <img src="{{ asset('images/Mugupp ordinary.png') }}" alt="">
-                                        <h4>CREATE YOUR OWN MUGUPP workspace AT THE ACADEME</h4>
-                                        <a href="/create-workspace"><button>Start Now</button></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="books">
-                                <h2>Your Books</h2>
-                                <div>
-                                    <ul>
-                                        @foreach($books as $book)
-                                        <li>
-                                            <a href = "{{ route('view-book', ["slug" => $book->slug]) }}">
-                                                {{ $book->title }}
-                                            </a>
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                <button>See all Books</button>
-                            </div>
-
-                            <div id="requests">
-                                <h2>Requests</h2>
-
-                                <ul id = "requests__ul">
-
-                                    @foreach( Auth::user()->contacts as $contact )
-                                    @if ( $contact->pivot->status == 0)
+                                <ul>
+                                    @foreach($books as $book)
                                     <li>
-                                        <div class = "requests_first__div">
-                                            <img src="storage/prof-pics/{{ $contact->user_pic }}" alt="" class = "messages--pic">
-                                            <div>
-                                                <p>{{ $contact->name }}</p>
-                                            <span>{{ $contact->uid }}</span>
-                                            </div>
-                                        </div>
-                                        <div class = "btns">
-                                            <button class = "accept">Accept</button>
-                                            <button class = "decline">Decline</button>
-                                        </div>
+                                        <a href = "{{ route('view-book', ["slug" => $book->slug]) }}">
+                                            {{ $book->title }}
+                                        </a>
                                     </li>
-                                    @endif
                                     @endforeach
                                 </ul>
                             </div>
+                            <button>See all Books</button>
+                        </div>
 
+                        <div id="requests">
+                            <h2>Requests</h2>
 
+                            <ul id = "requests__ul">
 
-                            <div id="suggestions">
-                                <h2>Trending Topics for You</h2>
-                                <div id="trends">
-                                    @foreach($topics as $topic)
-                                    <div class = "trend">
-                                        <a href = "">{{ $topic->community->name }}</a>
+                                @foreach( Auth::user()->contacts as $contact )
+                                @if ( $contact->pivot->status == 0)
+                                <li>
+                                    <div class = "requests_first__div">
+                                        <img src="storage/prof-pics/{{ $contact->user_pic }}" alt="" class = "messages--pic">
                                         <div>
-                                            <i class = "bi bi-newspaper"></i>
-                                            <p>
-                                                <a href = "{{ route('topic', ['slug' => $topic->slug ])}}"><span>{{ $topic->title }}</span></a>
-                                                <small> {{ sizeof($topic->threads) }} threads</small>
-                                            </p>
+                                            <p>{{ $contact->name }}</p>
+                                        <span>{{ $contact->uid }}</span>
                                         </div>
                                     </div>
-                                    @endforeach
+                                    <div class = "btns">
+                                        <button class = "accept">Accept</button>
+                                        <button class = "decline">Decline</button>
+                                    </div>
+                                </li>
+                                @endif
+                                @endforeach
+                            </ul>
+                        </div>
 
-                                    <h3>Trending Tags</h3>
 
-                                    <div class="tags">
-                                        
-                                        <a href = ""><span>#</span>RideTheWorld</a>
-                                        <a href = ""><span>#</span>ReadREDBooks</a>
-                                        <a href = ""><span>#</span>RuleMugWorld</a>
-                                        <a href = ""><span>#</span>RideTheWaves</a>
-                                        
+
+                        <div id="suggestions">
+                            <h2>Trending Topics for You</h2>
+                            <div id="trends">
+                                @foreach($topics as $topic)
+                                <div class = "trend">
+                                    <a href = "">{{ $topic->community->name }}</a>
+                                    <div>
+                                        <i class = "bi bi-newspaper"></i>
+                                        <p>
+                                            <a href = "{{ route('topic', ['slug' => $topic->slug ])}}"><span>{{ $topic->title }}</span></a>
+                                            <small> {{ sizeof($topic->threads) }} threads</small>
+                                        </p>
                                     </div>
                                 </div>
+                                @endforeach
 
-                                <h2>People you may know</h2>
-                                <div id = "suggested-contacts">
+                                <h3>Trending Tags</h3>
 
-                                    <h3>Who To Follow</h3>
-                                    <ul>
-                                        @foreach($suggestions as $suggestion)
-                                        <li class="follow-suggestion">
-                                            <img src="storage/prof-pics/{{ $suggestion->user_pic }}" alt="">
-                                            <p>
-                                                <span>{{ $suggestion->name }}</span>
-                                                <a href = "">{{ $suggestion->uid }}</a>
-
-                                                <button>Follow</button>
-                                            </p>
-                                        </li>
-                                        @endforeach
-                                    </ul>
-
-                                    <h3>Who You May Know</h3>
-                                    <ul>
-
-                                        @foreach($suggestions as $suggestion)
-                                        <li class = "contact-suggestion">
-                                            <img src="storage/prof-pics/{{ $suggestion->user_pic }}" alt="">
-                                            <div>
-                                                <p>{{ $suggestion->name }}</p>
-                                            <span>{{ $suggestion->uid }}</span>
-                                            </div>
-                                            
-                                            <button>
-                                                <i class = "bi bi-plus"></i>
-                                            </button>
-                                        </li>
-                                        @endforeach
-    
-                                    </ul>
-
-                                    <button>See all <i class = "arrow-left"></i></button>
-
+                                <div class="tags">
+                                    
+                                    <a href = ""><span>#</span>RideTheWorld</a>
+                                    <a href = ""><span>#</span>ReadREDBooks</a>
+                                    <a href = ""><span>#</span>RuleMugWorld</a>
+                                    <a href = ""><span>#</span>RideTheWaves</a>
+                                    
                                 </div>
-                                
                             </div>
-                        </div>
 
-                        <div class="misc-footer">
-                            <a href="">privacy policy</a>
-                            <a href="">T & C</a>
-                            <a href="">About Mugupp</a>
-                        </div>
+                            <h2>People you may know</h2>
+                            <div id = "suggested-contacts">
 
-                        </div>       
-                    
+                                <h3>Who To Follow</h3>
+                                <ul>
+                                    @foreach($suggestions as $suggestion)
+                                    <li class="follow-suggestion">
+                                        <img src="storage/prof-pics/{{ $suggestion->user_pic }}" alt="">
+                                        <p>
+                                            <span>{{ $suggestion->name }}</span>
+                                            <a href = "">{{ $suggestion->uid }}</a>
+
+                                            <button>Follow</button>
+                                        </p>
+                                    </li>
+                                    @endforeach
+                                </ul>
+
+                                <h3>Who You May Know</h3>
+                                <ul>
+
+                                    @foreach($suggestions as $suggestion)
+                                    <li class = "contact-suggestion">
+                                        <img src="storage/prof-pics/{{ $suggestion->user_pic }}" alt="">
+                                        <div>
+                                            <p>{{ $suggestion->name }}</p>
+                                        <span>{{ $suggestion->uid }}</span>
+                                        </div>
+                                        
+                                        <button>
+                                            <i class = "bi bi-plus"></i>
+                                        </button>
+                                    </li>
+                                    @endforeach
+
+                                </ul>
+
+                                <button>See all <i class = "arrow-left"></i></button>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="misc-footer">
+                        <a href="">privacy policy</a>
+                        <a href="">T & C</a>
+                        <a href="">About Mugupp</a>
+                    </div>
+
+                    </div>       
+                
                 </div>
             </main>
         </div>

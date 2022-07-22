@@ -1,31 +1,37 @@
+:root {
+    font-size : 14px;
+}
+
+.div-header {
+    position : relative;
+}
+
+.div-header i {
+    position : absolute;
+    right : 4px;
+    top : 4px;
+}
+
 #container {
     display : grid;
     width : 100%;
     position : relative;
     gap : 1rem;
-    grid-template-columns: auto 24%;
+    padding : 0px .8rem;
+    grid-template-columns: auto 500px;
     min-height : 100vh;
-}
-
-#container > h1 {
-    font-size : 1.4rem;
-    font-weight : 350;
-    position : absolute;
-    top : 30px;
-    left : 80px;
-    color : var(--color-gray);
 }
 
 #container section {
     position : relative;
     width : 100%;
-    padding-left : 16px;
 }
 
-section > h2 {
+section > h1 {
     font-size : 1.4rem;
     font-weight : 350;
     margin : 12px;
+    color : var(--color-gray);
 }
 
 #study-left {
@@ -33,192 +39,551 @@ section > h2 {
     flex-direction : column;
     flex-wrap : wrap;
     justify-content: flex-start;
-    padding-top : 50px;
     position : relative;
     gap : 1rem;
     overflow-x : hidden;
+}
+
+#study-nav {
+    padding : .8rem 1.2rem;
+    display : flex;
+    justify-content : space-between;
+    color : var(--color-dark);
+    position : sticky;
+    top : 0px;
+    width : 100%;
+    left : 0px;
+    display : flex;
+    justify-content : space-between;
+    gap : .9rem;
+    align-items : center;
+}
+
+
+#study-nav > h1 {
+    font-size : 1.4rem;
+    font-weight : 350;
+    color : var(--color-gray);
+}
+
+#study-nav > div {
+    display : flex;
+    gap : 1rem;
+}
+
+#study-nav i {
+    padding-top : 4px;
+    font-size : 1.4rem;
+    text-align : center;
+    z-index : 999;
+}
+
+#study-nav i {
+    cursor : pointer;
 }
 
 #welcome {
     width : 100%;
-    display : flex;
-    justify-content : space-around;
     margin : 0px 16px;
-}
-
-#welcome h2 {
-    font-size : .9rem;
-    color : var(--color-primary-main);
-    margin-bottom : 40px;
-}
-
-#welcome h3 {
-    font-size : 1.8rem;
-    font-weight : 400;
-}
-
-#welcome h3  b {
-    font-weight : 600;
-    letter-spacing : 5px;
-    font-size : 2.6rem;
-    margin-left : 1.05rem;
-    color : var(--color-orange);
-}
-
-#welcome svg {
-    width : 320px;
-    height : 100%;
-    transition : .3s;
-}
-
-#svg-container {
-    position : relative;
-    margin-top : -50px;
-    margin : 16px auto;
-}
-
-#svg-container:hover svg {
-    transform : translateY(-3rem);
-}
-
-#under-btn {
-    position : absolute;
-    bottom : 12px;
-    width : 100%;
-    left : 0px;
-    background : var(--color-primary-main);
-    height : 3rem;
-    color : var(--color-white);
-    font-size : 1.1rem;
-}
-
-.row-nav {
-    position : absolute;
-    right : 8px;
-    top : 0px;
-    display : flex;
+    min-height : 100px;
+    border-radius : 6px;
+    background : var(--color-white);
+    padding : 1rem;
     gap : 1rem;
 }
 
-.row-nav i {
-    font-size : 1.6rem;
-    color : var(--color-green);
-}
-
-.r-junior {
-    width : 100%;
-    min-height : 300px;
-    display : flex;
-    flex-wrap : wrap;
-    flex-grow : 1;
-    justify-content : flex-end;
-    margin-bottom : 24px;
-    gap : 1.8rem;
-}
-
-.r-junior > div > div{
-    padding : 12px;
-}
-
-.r-junior img {
-    width : 100%;
-    max-height : 200px;
-}
-
-.oner {
-    min-height : 380px;
-    width : 300px;
-    background : var(--color-white);
-    border-radius : 8px;
-    overflow-x : hidden;
-    box-shadow : 0px 0px 30px rgb(231, 229, 229);
-}
-
-.oner h3, .twoer h3, .div-header{
-    margin : 12px;
-    font-weight : 500;
-    padding : 4px;
-    font-size : 1.1rem;
-}
-
-.twoer {
-    min-height : 300px;
-    min-width : 800px;
-    background : var(--color-white);
-    border-radius : 8px;
-    overflow-x : hidden;
-    box-shadow : 0px 0px 30px rgb(231, 229, 229);
-}
-
-.thinner {
-    min-height : 300px;
-    width : 100px;
-    padding : 16px 8px;
-    border-radius : 16px;
-    background : var(--color-white);
-}
-
-#dash-stats {
-    justify-content : space-evenly;
-    row-gap : 2rem;
-    display : flex;
-    width : 100%;
-    flex-wrap : wrap;
-    align-content : center;
-    color : var(--color-white);
-    font-size : 1.3rem;
-}
-
-#dash-stats > div {
-    height : 100px;
-    padding : 16px 24px;
+#welcome h1 {
+    font-size : 1.4rem;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color : var(--color-dark);
-    text-align : center;
-    box-shadow : 0px 0px 6px var(--color-light-blue);
-    border-radius : 4px;
+}
+
+#courses {
+    margin-top : 30px;
+}
+
+#live_lectures {
+    padding : 1rem;
+    margin-bottom : 2rem;
+}
+
+#live_lectures h2 {
+    margin : .8rem;
+    font-size : 1.2rem;
+    color : var(--color-dark);
+    font-weight : 300;
+}
+
+#live_lectures {
+    width : 100%;
+}
+
+#live_lectures > div {
+    width : 100%;
+    gap : .8rem;
+}
+
+#live_lectures h2 {
+    font-size : 1.3rem;
+    margin-left : 1.2rem;
+}
+
+#live_lectures h3 {
+    font-size : 1rem;
+    color : var(--color-gray);
+    margin-left : 1.8rem;
+}
+
+.owl-nav {
+    position: absolute;
+    top : -4rem;
+    right : 8px;
+    font-size : 1.8rem;
+}
+
+.live-lecture {
+    width : 500px;
+    display : flex;
+    flex-direction : column;
+    margin : .8rem;
+    border-radius : 6px;
+    box-shadow : 0px 0px 4px var(--color-dark);
+    background : var(--color-white);
+    padding : 1rem;
+}
+
+.live-lecture .live-lecture-top {
     display : flex;
     justify-content: space-between;
     align-items : center;
-    gap : 1rem;
-    background : var(--color-white);
-    cursor : pointer;
+    gap : .5rem;
+    margin-bottom : 12px;
 }
 
-.stats-icon {
-    padding : 12px;
-    height : 46px;
-    border-radius: 3px;
-    background : var(--icon-color);
-}
-
-#dash-stats .stats-icon i {
-    background : var(--icon-color);
-    color : var(--color-white);
-}
-
-#r-one-junior {
-    margin-top : 38px;
-    justify-content : space-between;
-}
-
-#study-goal-info {
-    min-width : 100%;
-    background : var(--color-primary-main);
-    background-size : contain;
-    border-radius : 8px;
-    min-height : 300px;
-    padding : 1.8rem;
+.live-lecture .live-lecture-top > div {
     display : flex;
-    justify-content : space-between;
+    flex-direction : column;
+    gap : .6rem;
+}
+
+.live-lecture .live-lecture-top h4 {
+    font-size : 1.4rem;
+    overflow : hidden;
+    white-space : nowrap;
+    text-overflow : ellipsis;
+}
+
+.live-lecture .live-lecture-top p {
+    font-size : 1.2rem;
+    white-space : nowrap;
+    overflow : hidden;
+    text-overflow : ellipsis;
+}
+
+.live-lecture .live-lecture-top button {
+    padding : .4rem 1rem;
     color : var(--color-white);
+    background : var(--color-dark);
+    border-radius : 3px;
+    display : flex;
+    align-items : center;
+    gap : .8rem;
+    font-size : 1.4rem;
+}
+
+.live-lecture .live-lecture-top i {
+    padding-top : 6px;
+    font-size : 1.6rem;
+}
+
+.live-lecture .timestamp {
+    padding : 1rem;
+    display : flex;
+    flex-direction : column;
+    gap : .8rem;
+}
+
+.live-lecture .timestamp > div {
+    display : flex;
+    gap : 1rem;
+    width : 100%;
+    justify-content : space-between;
+}
+
+.live-lecture .timestamp > div p {
+    color : var(--color-gray);
+    overflow : hidden;
+    white-space : nowrap;
+    text-overflow : ellipsis;
+    font-size : 1.2rem;
+}
+
+.live-lecture .timestamp > div span {
+    color : var(--color-gray);
+    width : 100px;
+    text-align : right;
+}
+
+.live-lecture .timestamp .current-timestamp p {
+    color : var(--color-dark);
+    font-size : 1.4rem;
+}
+
+.live-lecture .timestamp .current-timestamp span {
+    font-size : 1.4rem;
+    color : var(--color-dark);
+}
+
+#my_courses {
+    position : relative;
+    padding : 1rem;
+    width : 100%;
+    margin-bottom : 1.5rem;
+}
+
+#my_courses h2 {
+    font-size : 1.3rem;
+    margin-left : 1.2rem;
+}
+
+#my_courses select {
+    position : absolute;
+    top : 0px;
+    right : 0px;
+}
+
+#my_courses .course {
+    height : 70px;
+    margin-left : 80px;
+    margin-top : 80px;
+    background : var(--color-white);
+    position: relative;
+    width : 764px;
+    box-shadow : 0px 0px 2px var(--color-dark);
+    border-radius : 3px;
+    display : flex;
+    padding : 4px 1rem;
+    gap : 1.6rem;
+    align-items : center;
+    justify-content : space-between;
+}
+
+#my_courses .course .course-img {
+    height : 70px;
+    width : 80px;
+    border-radius : 3px;
+    background : var(--color-white);
+    box-shadow : 0px 0px 2px var(--color-gray);
+    padding : .4rem;
+    transform : translateY(-40px);
+}
+
+#my_courses .course .course-img img {
+    width : 100%;
+    height : 100%;
+}
+
+#my_courses .course .details {
+    width : 100%;
+    display : flex;
+    flex-direction : column;
+    gap : 4px;
+    overflow : hidden;
+    text-overflow: ellipsis;
+}
+
+#my_courses .course .details h4 {
+    font-size : 1.3rem;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+    overflow: hidden;
+    font-weight : 400;
+}
+
+#my_courses .course .details p {
+    font-size : .9rem;
+    font-weight : 300;
+    color : var(--color-gray);
+}
+
+#my_courses .course > p {
+    width : 140px;
+    font-size : 1rem;
+    font-weight : 300;
+    color : var(--color-dark);
+}
+
+#my_courses .course .course-btn {
+    position : absolute;
+    height : 100%;
+    width : 100%;
+    overflow : hidden;
+    pointer-events : none;
+    padding : 1rem;
+    display : flex;
+    left: 0px;
+    top : 0px;
+    justify-content : flex-end;
     align-items : center;
 }
 
-#study-goal-info div {
-    height : 100%;
+#my_courses .course .course-btn button {
+    padding : .8rem 2.8rem;
+    border-radius : 3px;
+    background : var(--color-dark);
+    color : var(--color-white);
+    pointer-events : initial;
+    transform : translateX(120%);
+    transition : all .1s linear;
+}
+
+#my_courses .course:hover .course-btn button {
+    transform : translateX(0%);
+}
+
+.show-all-btn {
+    padding : .7rem 1rem;
+    background : var(--color-dark);
+    color : var(--color-white);
+    margin : 1.2rem;
+    margin-top : 40px;
+    border-radius : 2px;
+}
+
+#courses-top-picks {
+    width : 100%;
+    display : flex;
+    padding : 1rem;
+    gap : .8rem;
+}
+
+.top-pick {
+    display : flex;
+    width : 220px;
+    flex-direction : column;
+}
+
+.top-pick_top {
+    position : relative;
+    height : 150px;
+    overflow : hidden;
+}
+
+.top-pick_top img {
+    width : 100%;
+    aspect-ratio: 1 / .8;
+}
+
+.top-pick_top .tag {
+    position : absolute;
+    top : 0px;
+    left : 0px;
+    margin : 4px;
+    padding : .3rem 1rem;
+    color : var(--color-white);
+    pointer-events : none;
+    background : var(--color-dark);
+}
+
+.top-pick_top .length {
+    position : absolute;
+    bottom : 0px;
+    right : 0px;
+    pointer-events : none;
+    margin : 4px;
+    padding : .2rem .8rem;
+    color : var(--color-gray);
+    background : var(--color-dark);
+}
+
+.top-pick_bottom {
+    display : flex;
+    flex-direction : column;
+    gap : .8rem;
+    padding : 1rem;
+    width : 100%;
+}
+
+.top-pick_bottom h4 {
+    font-size : 1.2rem;
+    overflow : hidden;
+    white-space: nowrap;
+    text-overflow : ellipsis;
+}
+
+.top-pick_bottom p {
+    color : var(--color-gray);
+    font-size : .8rem;
+    overflow : hidden;
+    white-space : nowrap;
+    text-overflow: clip;
+}
+
+#contacts {
+    display : flex;
+    flex-direction : column;
+}
+
+#contacts > h1 {
+    width : 100%;
+}
+
+#contacts  h5 {
+    font-size : 1.4rem;
+    padding-left : 14px;
+    margin : 12px;
+    font-weight : 300;
+}
+
+#contacts > div {
+    padding : 14px 24px;
+}
+
+#admins > div {
+    display : flex;
+    gap : 2rem;
+}
+
+.admin {
+    display : flex;
+    gap : 1rem;
+    padding : 16px 24px;
+    background : var(--color-dark);
+    border-radius : 6px;
+    box-shadow : 0px 0px 4px var(--color-white);
+    font-size : 1.2rem;
+    align-items : center;
+    color : var(--color-white);
+}
+
+.admin img {
+    height : 48px;
+    width : 48px;
+    border-radius : 40%;
+}
+
+.admin div {
+    display : none;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.admin:hover div {
+    display : flex;
+}
+
+.admin small {
+    font-size : .8rem;
+    color : var(--color-gray);
+}
+
+#artisans {
+    width : 100%;
+    height : 400px;
+    position : relative;
+}
+
+#artisans > .owl-carousel {
+    margin-top : 30px;
+    display : flex;
+    position : relative;
+}
+
+.artisan {
+    min-width : 340px;
+    max-width : 340px;
+    background : var(--color-white);
+    border-radius : 4px;
+    position : relative;
+    padding : 1.1rem;
+    margin : .7rem;
+    padding-top : 60px;
+    display : flex;
+    flex-direction : column;
+    gap : 1.03rem;
+}
+
+.artisan img {
+    height : 52px;
+    max-width : 52px;
+    border-radius : 20%;
+    position : absolute;
+    top : -12px;
+    left : 12px;
+}
+
+.artisan--desc {
+    display : flex;
+    justify-content : space-between;
+    align-items : center;
+}
+
+.artisan--desc button {
+    font-size : 1.02rem;
+    font-weight : 450;
+    padding : 8px 16px;
+    border-radius : 2px;
+    box-shadow : 0px 0px 3px var(--color-gray);
+    color : var(--color-white);
+    background : var(--color-dark);
+}
+
+.artisan--links {
+    display : flex;
+    justify-content : center;
+    gap : 1.8rem;
+    margin-top : 40px;
+}
+
+.artisan--links i {
+    padding : 13px;
+    background : var(--i-color);
+    border-radius : 50%;
+    color : var(--color-white);
+    height : 40px;
+    width : 40px;
+}
+
+.artisan p {
+    font-size : 1.05rem;
+    font-weight : 500;
+}
+
+.artisan small {
+    font-size : .8rem;
+}
+
+#study-right {
+    box-shadow : 0px 0px 1rem 1px var(--color-light-blue);
+    margin-right : 12px;
+    transition : .2s;
+    padding : 0px .9rem 1.2rem;
+}
+
+#study-goal-info {
+    width : 100%;
+    border-radius : 8px;
+    min-height : 300px;
     display : flex;
     flex-direction : column;
     justify-content : space-between;
+    color : var(--color-dark);
+    align-items : center;
+}
+
+#study-date-data {
+    font-size : .8rem;
+    margin-top : 8px;
+    color : var(--color-primary-main);
+    margin-bottom : 10px;
+}
+
+#study-goal-info > h2 {
+    font-size : 1.7rem;
+    font-weight : 380;
+    margin : 16px auto;
+    width : 100%;
+    text-align : center;
 }
 
 #study-goal-info p {
@@ -240,25 +605,136 @@ section > h2 {
     background : var(--color-primary-main);
 }
 
-#study-goal-info img {
+#study-goal-info > img {
     height : 120px;
-    width : 160px;
+    width : 120px;
+    border-radius : 6px;
+    box-shadow : 0px 0px 4px var(--color-lemon);
+    margin : 12px auto 16px;
+    border : 6px solid var(--color-light);
+    outline : 2px solid var(--color-primary-color);
 }
 
-.div-header {
-    position : relative;
+#study-goal-info > p {
+    text-align : center;
 }
 
-#todo ul, #recent_activity ul {
+#dash-stats {
+    justify-content : center;
+    gap : 6px;
+    row-gap : 2rem;
+    display : flex;
+    margin-top : 1.2rem;
+    width : 100%;
+    flex-wrap : wrap;
+    align-content : center;
+    color : var(--color-white);
+    font-size : .9rem;
+}
+
+#dash-stats > div {
+    padding : .8rem;
+    color : var(--color-dark);
+    text-align : center;
     display : flex;
     flex-direction : column;
-    padding : 12px 16px 16px;
-    gap : 8px;
+    align-items : center;
+    gap : .8rem;
+}
+
+.stats-icon {
+    border-radius: 3px;
+    color : var(--icon-color);
+}
+
+#todo {
+    margin : 3.5rem auto;
+    width : 98%;
+    padding : 1rem;
+    padding-bottom : 26px;
+    color : var(--color-dark);
+    height : 440px;
+    overflow : hidden;
+    box-shadow : 0px 3px 4px -1px var(--color-lemon);
+}
+
+#todo h1 {
+    font-size : 1.3rem;
+    color : var(--color-dark);
+    margin-bottom : 1.5rem;
+    font-weight : 500;
+}
+
+#todo > ul {
+    max-height : 300px;
+    box-shadow : inset 0px 0px 2px var(--color-lemon);
+    margin-bottom : .7rem;
+    overflow : scroll;
+    overscroll-behavior: contain;
+}
+
+#todo > ul::-webkit-scrollbar-corner {
+    display : none;
+}
+
+#todo li {
+    display : flex;
+    gap : .8rem;
+    padding : 1rem;
+    border-bottom : 1px solid var(--color-lemon);
+    justify-content : space-between;
+    align-items : center;
+}
+
+#todo div {
+    display : flex;
+    flex-direction : column;
+    gap : 2px;
+}
+
+#todo li span {
+    height : 35px;
+    width : 35px;
+    background : var(--color-green);
+    text-align : center;
+    padding-top : 6px;
+    border-radius : 50%;
+    color : var(--color-white);
+}
+
+#todo input {
+    background : var(--color-dark);
+}
+
+
+#progresses {
+    width : 100%;
+    margin : 16px 0px;
+    padding : 12px 16px;
+    height : 100%;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+}
+
+#study-right-sticky {
+    position : sticky;
+    top : 14px;
 }
 
 #events {
-    width : 520px;
+    width : 98%;
+    margin : 2rem auto;
     flex-grow : 1;
+    padding : 1rem;
+    box-shadow : 0px 3px 4px -1px var(--color-lemon);
+}
+
+#events > h1 {
+    font-size : 1.2rem;
+    color : var(--color-dark);
+    position : relative;
+    margin : 1rem;
 }
 
 #calendar-head {
@@ -267,10 +743,15 @@ section > h2 {
     align-items : center;
     font-size : 1.4rem;
     color : var(--color-white);
-    background : var(--color-primary-main);
-    padding : 16px 24px;
+    background : var(--color-dark);
+    padding : 6px 16px;
     width : 100%;
+    border-radius : 4px;
     margin-bottom : 16px;
+}
+
+#calendar-head i {
+    padding-top : 4px;
 }
 
 #days {
@@ -291,7 +772,7 @@ section > h2 {
     position : relative;
     width : calc((100% - 7%) / 7);
     color : var(--color-dark);
-    font-size : 1.1rem;
+    font-size : 1rem;
     font-weight : 500;
 }
 
@@ -301,7 +782,7 @@ section > h2 {
 }
 
 #dates span.event {
-    background : var(--color-primary-main);
+    background : var(--color-dark);
     color : var(--color-white);
 }
 
@@ -321,7 +802,12 @@ section > h2 {
 #notice-board {
     width : 100%;
     background : var(--color-white);
-    padding-right : .8rem;
+    padding : 1rem;
+}
+
+#notice-board > h1 {
+    margin : 1rem;
+    font-size : 1.2rem;
 }
 
 #notice-board > p {
@@ -380,274 +866,18 @@ section > h2 {
     position : absolute;
 }
 
-.div-header i {
-    position : absolute;
-    top : 4px;
-    right : 4px;
-}
-
-#exam-result-gpa > div {
-    display : flex;
-    margin-top : 40px;
-    gap : 2.6rem;
-    align-items : center;
-    justify-content : center;
-    flex-direction : column;
-}
-
-#exam-result-gpa > div h5 {
-    font-size : 1.4rem;
-    color : var(--color-primary-main);
-    font-weight : 600;
-}
-
-#exam-result-gpa svg {
-    width : 150px;
-    height : 160px;
-}
-
-#contacts {
-    display : flex;
-    flex-direction : column;
-}
-
-#contacts  h5 {
-    font-size : 1.4rem;
-    padding-left : 14px;
-    font-weight : 300;
-}
-
-#contacts > div {
-    padding : 14px 24px;
-}
-
-#admins > div {
-    display : flex;
-    gap : 2rem;
-}
-
-.admin {
-    display : flex;
-    gap : 1rem;
-    padding : 16px 24px;
-    background : var(--color-light-blue);
-    border-radius : 6px;
-    box-shadow : 0px 0px 4px var(--color-white);
-    font-size : 1.2rem;
-    align-items : center;
-    color : var(--color-white);
-}
-
-.admin img {
-    height : 48px;
-    width : 48px;
-    border-radius : 40%;
-}
-
-.admin div {
-    display : none;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.admin:hover div {
-    display : flex;
-}
-
-.admin small {
-    font-size : .8rem;
-    color : var(--color-gray);
-}
-
-.swiper {
-    width : 100%;
-    height : 400px;
-}
-
-#artisans > .swiper-wrapper {
-    margin-top : 30px;
-    display : flex;
-    position : relative;
-}
-
-.artisan {
-    min-width : 300px;
-    max-width : 300px;
-    background : var(--color-white);
-    border-radius : 4px;
-    position : relative;
-    padding : 1.1rem;
-    padding-top : 60px;
-    display : flex;
-    flex-direction : column;
-    gap : 1.03rem;
-}
-
-.artisan img {
-    height : 52px;
-    width : 52px;
-    border-radius : 20%;
-    position : absolute;
-    top : -12px;
-    left : 12px;
-}
-
-.artisan--desc {
-    display : flex;
-    justify-content : space-between;
-    align-items : center;
-}
-
-.artisan--desc button {
-    font-size : 1.02rem;
-    font-weight : 450;
-    padding : 8px 16px;
-    border-radius : 2px;
-    box-shadow : 0px 0px 3px var(--color-gray);
-    color : var(--color-white);
-    background : var(--color-primary-main);
-}
-
-.artisan--links {
-    display : flex;
-    justify-content : center;
-    gap : 1.8rem;
-    margin-top : 40px;
-}
-
-.artisan--links i {
-    padding : 13px;
-    background : var(--i-color);
-    border-radius : 50%;
-    color : var(--color-white);
-    height : 40px;
-    width : 40px;
-}
-
-.artisan p {
-    font-size : 1.05rem;
-    font-weight : 500;
-}
-
-.artisan small {
-    font-size : .8rem;
-}
-
-#study-right {
-    box-shadow : 0px 0px 1rem var(--color-light-blue);
-    transition : .2s;
-}
-
-#study-right > h2 {
-    font-size : 1.7rem;
-    font-weight : 380;
-    margin : 16px auto;
-    width : 100%;
-    text-align : center;
-}
-
-#study-right > img {
-    height : 120px;
-    width : 120px;
-    border-radius : 6px;
-    box-shadow : 0px 0px 4px var(--color-lemon);
-    margin : 12px auto 16px;
-}
-
-#study-right > p {
-    text-align : center;
-}
-
-#progresses {
-    width : 100%;
-    margin : 16px 0px;
-    padding : 12px 16px;
-}
-
-#progresses h5 {
-    font-size : 1.2rem;
-    display : flex;
-    justify-content: space-between;
-}
-
-#progresses h5 b {
-    font-weight : 320;
-    color : var(--h5-color);
-}
-
-.progress-outer {
-    min-width : 100%;
-    background : var(--color-white);
-    height : 8px;
-    border-radius : 8px;
-    overflow : hidden;
-    margin : 8px 0px;
-}
-
-.progress-inner {
-    background : var(--progress-color);
-    width : 30%;
-    height : 100%;
-}
-
-#todo {
-    margin : 0px auto;
-    width : 350px;
-    background : var(--color-white);
-    padding : 8px;
-    padding-bottom : 26px;
-    color : var(--color-dark);
-    min-height : 380px;
-}
-
-#todo h5 {
-    font-size : 1.3rem;
-    color : var(--color-green);
-    font-weight : 500;
-}
-
-
-#todo li {
-    display : flex;
-    gap : .8rem;
-    border-bottom : 1px solid var(--color-lemon);
-    height : 60px;
-    justify-content : space-between;
-    align-items : center;
-}
-
-#todo div {
-    display : flex;
-    flex-direction : column;
-    gap : 2px;
-}
-
-#todo li span {
-    height : 35px;
-    width : 35px;
-    background : var(--color-green);
-    text-align : center;
-    padding-top : 6px;
-    border-radius : 50%;
-    color : var(--color-white);
-}
-
-#todo input {
-    background : var(--color-dark);
-}
-
-#study-right-sticky {
-    position : sticky;
-    top : 14px;
-}
-
 #messages {
-    width : 350px;
+    width : 98%;
     min-height : 300px;
     color : var(--color-dark);
     padding : 8px;
     background : var(--color-white);
-    margin : 24px auto;
+    margin : 2.4rem auto;
+}
+
+#messages > h1 {
+    font-size : 1.2rem;
+    margin : 1rem;
 }
 
 #messages ul {
@@ -659,6 +889,7 @@ section > h2 {
 
 #messages li {
     display : flex;
+    padding : .6rem;
     gap : .8rem;
 }
 
@@ -704,17 +935,6 @@ section > h2 {
         padding-left : 0px;
     }
 
-    #welcome {
-        padding : 0px;
-        margin : 0px;
-        display : flex;
-        flex-direction: column;
-    }
-
-    .twoer {
-        min-width : 100%;
-    }
-
     #dash-stats {
         gap : 2rem;
     }
@@ -745,13 +965,40 @@ section > h2 {
     }
 }
 
+@media screen and (max-width : 680px) {
+    #study-nav {
+        padding-right : 6rem;
+    }
+
+    #courses #live_lectures .live-lecture {
+        width : 340px;
+        margin : .8rem 0px;
+    }
+
+    #my_courses .course {
+        width : 400px;
+        margin-left : 0px;
+        padding : 1rem;
+    }
+}
+
 @media screen and (max-width : 564px) {
     :root {
         font-size : 13.2px;
     }
 
-    .oner {
-        width : 100%;
+    #study-nav {
+        padding-right : 7rem;
+    }
+
+    #courses #live_lectures .live-lecture {
+        width : 96%;
+        margin : 8px;
+    }
+
+    #my_courses .course {
+        width : 98%;
+        margin-left : 0px;
         padding : 1rem;
     }
 
@@ -761,47 +1008,4 @@ section > h2 {
 }
 .phpdebugbar {
     display : none;
-}
-
-#study-nav {
-    height : 2.5rem;
-    background : var(--color-dark);
-    color : var(--color-white);
-    position : fixed;
-    bottom : 0px;
-    width : 100%;
-    padding-left : 4rem;
-    padding-right : 1rem;
-    left : 0px;
-    display : flex;
-    justify-content : space-between;
-    gap : .9rem;
-    align-items : center;
-    z-index : 9999;
-    opacity : 0;
-}
-
-#study-nav:hover {
-    opacity : 1;
-}
-
-#study-nav > i {
-    position : absolute;
-    left : 0px;
-    top : 0px;
-    padding-top : 12px;
-    height : 100%;
-    width : 48px;
-    text-align : center;
-    border-right : 1px solid var(--color-white);
-    z-index : 999;
-}
-
-#study-nav > ul {
-    display : flex;
-    gap : .8rem;
-}
-
-#study-nav i {
-    cursor : pointer;
 }
