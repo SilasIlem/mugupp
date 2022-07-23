@@ -10,6 +10,7 @@ use App\Http\Controllers\PayController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\QuestController;
 use App\Http\Controllers\SuperAdminController;
+use App\Mail\WelcomeMail;
 use App\Models\Book;
 use App\Models\Comment;
 use App\Models\Community;
@@ -41,6 +42,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/email', function () {
+    return new WelcomeMail();
+});
 
 Route::get('/', function () {
     return view('mugupp', ['districts' => District::with(['artisans', 'profile'])->paginate(4), 'courses' => Course::paginate(5)]);

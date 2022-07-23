@@ -225,8 +225,8 @@
                     </a>
                 </div>
 
-                <div id="courses-top-picks" class="courses-top-picks">
-                    <div class = "top-pick">
+                <div id="courses-top-picks" class="courses-top-picks owl-carousel owl-carousel3">
+                    <div class = "top-pick item">
                         <div class="top-pick_top">
                             <p class="tag">Popular</p>
                             <a href="">
@@ -242,7 +242,7 @@
                     </div>
                     
                     
-                    <div class = "top-pick">
+                    <div class = "top-pick item">
                         <div class="top-pick_top">
                             <p class="tag">Popular</p>
                             <a href="">
@@ -256,7 +256,7 @@
                             <p>by Denvors Winner</p>
                         </div>
                     </div>
-                    <div class = "top-pick">
+                    <div class = "top-pick item">
                         <div class="top-pick_top">
                             <p class="tag">Popular</p>
                             <a href="">
@@ -270,7 +270,7 @@
                             <p>by Denvors Winner</p>
                         </div>
                     </div>
-                    <div class = "top-pick">
+                    <div class = "top-pick item">
                         <div class="top-pick_top">
                             <p class="tag">Popular</p>
                             <a href="">
@@ -284,7 +284,7 @@
                             <p>by Denvors Winner</p>
                         </div>
                     </div>
-                    <div class = "top-pick">
+                    <div class = "top-pick item">
                         <div class="top-pick_top">
                             <p class="tag">Popular</p>
                             <a href="">
@@ -298,7 +298,7 @@
                             <p>by Denvors Winner</p>
                         </div>
                     </div>
-                    <div class = "top-pick">
+                    <div class = "top-pick item">
                         <div class="top-pick_top">
                             <p class="tag">Popular</p>
                             <a href="">
@@ -812,6 +812,27 @@
                 },
                 1000:{
                     items:3
+                }
+            }
+        })
+
+        $('.owl-carousel3').owlCarousel({
+            loop:true,
+            navText: ['<i class="bi bi-caret-left-fill owl-city-nav"></i>', '<i class="bi bi-caret-right-fill owl-city-nav"></i>'],
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600 : {
+                    items : 2
+                },
+                764 : {
+                    items : 3
+                },
+                1000:{
+                    items:4
                 }
             }
         })

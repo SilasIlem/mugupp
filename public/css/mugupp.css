@@ -1727,7 +1727,7 @@ footer h2 {
 
     #m-name {
         background : none;
-        font-size : 1.8rem;
+        font-size : 2.2rem;
         padding : 1rem;
         font-weight : 400;
         padding-top : 10px;
@@ -1750,6 +1750,11 @@ footer h2 {
         display : none;
     }
 
+    #login-opener:hover {
+        background : none;
+        color : var(--color-dark);
+    }
+
     .card.login {
         border : none;
         padding : 30px;
@@ -1758,6 +1763,12 @@ footer h2 {
         max-width : 346px;
         background : transparent;
         box-shadow : none;
+    }
+
+    .login input {
+        padding : 1rem;
+        border : none;
+        box-shadow : inset 0px 1px 3px var(--color-white), inset 1px 0px 3px var(--color-dark);
     }
 
     .login #sign {
